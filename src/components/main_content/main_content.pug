@@ -1,0 +1,31 @@
+include /mixins/main_mixins
+
+-var post = {class:'post',title:'Lorem ipsum Irure aliqua commodo in in.',content:'Lorem ipsum Irure incididunt occaecat enim est occaecat amet officia eu incididunt veniam et esse exercitation ut velit aute  nostrud voluptate velit enim dolore ullamco ex.', buttonClass:'read-more', buttonText: 'далее'}
+
+-var item = {class:'item',title:'Xteer GSL 20W50',price:'1500 грн',oldPrice:2000,itemImg:'assets/images/item.png',badgeClass:'hot',badgeText: 'hot'}
+
+-var i = 0
+-var index = 0
+-var ind = 0
+
+    .container-fluid.main.clearfix
+        .row
+            +b.posts.clearfix
+                +e.H2.heading СТАТЬИ
+                +e.image-wrapper
+                    +e.IMG(src="assets/images/oil_select.png").image-wrapper--image
+
+                while i < 2
+                    +CreatePost(post.class, post.title, post.content, post.buttonClass, post.buttonText)
+                    -i++
+            +b.top-selling
+                +e.H2.heading ТОП ПРОДАЖ
+                .items-row.clearfix
+                    while index < 3
+                        +CreateItem(item.class, item.title, item.price, item.itemImg, item.badgeClass, item.badgeText)
+                        -index++
+                +e.H2.heading ГОРЯЧИЕ ПРЕДЛОЖЕНИЯ
+                .items-row.clearfix
+                    while ind < 3
+                        +CreateItem(item.class, item.title, item.price, item.itemImg, 'top', 'top', item.oldPrice)
+                        -ind++

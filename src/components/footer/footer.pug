@@ -1,0 +1,24 @@
+.container-fluid.footer-navigation
+    include /components/navbar/navigation
+.container-fluid.the-footer
+    .row.footer
+        +b.socials.item.clearfix
+            h5.title мы в соцсетях
+            +e.A(href="https://twitter.com" target="_blank").icon.twitter
+            +e.A(href="https://odnoklassniki.com" target="_blank").icon.klass
+            +e.A(href="https://facebook.com" target="_blank").icon.facebook
+            +e.A(href="https://vk.com" target="_blank").icon.vk
+        +b.documents.item.clearfix
+            h5.title документация
+            +e.A(href="").element документация
+            +e.A(href="").element сертификаты
+        +b.currency.item.clearfix
+            h5.title курс валют
+            span.down Курс нбу : usd - 30.000
+ 
+        +b.subscribe.item.clearfix
+            h5.title Хочешь быть в в курсе всех событий и акций?
+            form(action="" name="subscribe-form" id="subscribe-form").clearfix
+                input(type="email" placeholder="Введите Ваш e-mail")
+                button(type="submit") Подписаться
+

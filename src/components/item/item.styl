@@ -1,0 +1,68 @@
+.item-card
+	width 31%
+	position relative
+	border 1px solid #e1e1e1
+	border-radius 7px
+	padding-bottom 18px
+	z-index 0
+	float left
+	&__media
+		&--image 
+			display block
+			margin 0 auto
+			padding-top 20px
+		.badge
+			position absolute
+			top 0 
+			left 0
+			border-bottom-left-radius 5px
+			border-bottom-right-radius 5px
+			border-top-left-radius 5px
+			
+			padding 9px 18px
+			font-size 12px
+			text-transform uppercase
+			z-index 1
+			color #fff
+			font-family 'helveticaneuecyr-roman'
+		.top-badge
+			background-color #330154
+		.hot-badge
+			background-color #90268e
+	&__title
+		color  #330154
+		font-size 14px
+		font-weight 700
+		text-align center
+		
+	&__price
+		color #90268e
+		font-size 15.78px
+		font-weight 700
+		text-align left
+		margin-left 20px
+		.price-old
+			text-decoration line-through
+			color #b9b9b9
+			float right
+			margin-right 20px
+.item-card:nth-child(2)
+	margin 0 20px		
+.item-card:hover
+	border-color #330154
+	border-width 1px
+	
+
+@media (max-width 1199px)
+	.item-card
+		width 31%
+
+
+@media (max-width 580px)
+	.item-card
+		width 48%
+		margin 10px auto	
+		
+	.item-card:nth-child(2)
+		margin auto
+		

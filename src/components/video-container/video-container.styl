@@ -1,0 +1,77 @@
+.video
+    @extends .main
+    padding-bottom 40px
+    .heading
+        @extends .main .posts__heading
+    .items-wrapper
+        
+        width 100%
+        height 343px
+        margin-right 2%
+        .video-item
+            display block
+            width 49%
+            height 100%
+            margin 0 auto
+            text-decoration none
+            overflow hidden
+            position relative
+            z-index 1
+            float left
+            
+            &:hover::before
+                opacity .7
+            &:hover .title
+                opacity .7
+            &:focus
+                outline none
+            &:before
+                position absolute
+                transition .2s linear all
+                left 25%
+                right 25%
+                width 50%
+                height 50%
+                z-index 1
+                top 25%
+                bottom 25%
+                content ''
+                background url('../images/play-big.png') center center no-repeat
+                background-size contain
+            .title
+                transition .2s linear all
+                color #fff
+                position absolute
+                bottom 5px
+                width 100%
+                font-size .8em
+                line-height .9em
+                height 1.7em
+                overflow hidden
+                text-align center
+            .image
+                display block
+                margin 0 auto
+                // width 100%
+                height 100%
+            &:not(:first-child)
+                width 23%
+                height 160px
+                margin 0 0 2% 2.5%
+                
+            &:nth-child(2n+2)
+                float left
+                
+            &:nth-child(2n+3)
+                float  right
+                margin-right 0
+@media(max-width 1199px)
+    .video
+        .items-wrapper
+            height auto
+            .video-item
+                width 100%
+                height auto
+                .image
+                    width 100%
+                    height auto

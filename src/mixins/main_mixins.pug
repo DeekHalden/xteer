@@ -1,0 +1,40 @@
+mixin CreateSlider(id, image, count)
+    -var i = 0
+    ul(id='lightSlider' +id)
+        while i < count
+            li
+                +b.slider-item
+                    +b.media
+                        +e.img(src=image)
+            -i++
+
+mixin CreatePost(itemClass, itemTitle, itemContent, buttonClass, buttonText)
+    +b(class=itemClass +"-card")
+        +e.H2.title #{itemTitle}
+        +e.P.content #{itemContent}
+        +e.A(type="button" href="" class=buttonClass).button #{buttonText}
+
+
+mixin CreateItem(itemClass, itemTitle, itemPrice, itemImg, itemBadgeClass, itemBadgeText, itemPriceOld)
+    +b(class=itemClass +"-card")
+        +e.media
+            +e.IMG(src=itemImg).media--image 
+            +e.P.media(class=itemBadgeClass+'-badge badge') #{itemBadgeText}
+            
+        +e.H2.title #{itemTitle}
+        if itemPriceOld
+            +e.SPAN.price #{itemPrice} <span class="price-old">#{itemPriceOld}</span>
+        else 
+            +e.SPAN.price #{itemPrice}
+
+mixin CreatePostCard(title, date, image, content, className)
+    +b(class = className)
+        +e.P.date #{date}
+        +b.info.clearfix
+            +e.IMG(src=image).image
+            +e.A(href="post.html").title #{title}
+            +e.P.content #{content}
+        +e.A(type="button" href="" class='button').button далее
+
+mixin CreateButton(href, text,button_class)
+    a(href=href class=button_class) #{text}

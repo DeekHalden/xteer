@@ -1,0 +1,11 @@
+include /mixins/main_mixins
+-var item = {title:'Lorem ipsum Tempor sed ullamco quis culpa non.', date:'22.12.2016', image:'assets/images/smile.png', content:['Lorem ipsum Do ullamco ut dolore do sunt sed in ea ea dolore cillum Excepteur labore ad labore.'],className:'news'}
+-var i = 0 
+.container-fluid.news-container
+    .row
+        .news-inner-container.clearfix
+            .heading Новости
+            .news-wrapper
+                while i < 4
+                    +CreatePostCard(item.title, item.date, item.image, item.content, item.className)
+                    -i++

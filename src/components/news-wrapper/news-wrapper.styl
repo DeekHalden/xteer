@@ -1,0 +1,84 @@
+
+.news-container
+    padding 40px 0
+    position  relative
+    @extend .main
+    .news-inner-container
+        background-color #fff
+        
+        .heading
+            @extend .main .posts__heading
+        .news-wrapper
+            border 1px solid $light-gold
+            display flex
+            // flex-wrap wrap
+            justify-content space-between
+            .news
+                
+                width 24%
+                color #666
+                margin-right 2%
+                &:last-child
+                    margin-right 0
+                &__date
+                    float right
+                    font-size .7em
+                .info
+                    &__image
+                        width 100%
+                        height auto
+                    &__title
+                        height 4.5em
+                        line-height 1.5em
+                        font-size 1em
+                        font-weight 600
+                        color $dark-purple
+                        text-decoration none
+                        overflow hidden
+                        &:hover
+                            text-decoration underline
+                        &:visited
+                            opacity .7    
+                    &__content
+                        font-size .85em
+                        line-height 1.2em
+                        height 4.8em
+                        overflow hidden
+                        color $light-gray
+                        margin-top 25px
+                            &:first-of-type
+                                text-indent 0
+                .button
+                    margin-top 20px
+
+
+@media (max-width 1199px)
+    .news-container
+        margin-top 20px
+        .news-inner-container
+            padding-top 20px
+            .news-wrapper
+                flex-wrap wrap
+                .news
+                    width 45%
+                    margin 10px auto
+                    &:nth-child(2n+1)
+                        margin-left 0
+                    &:nth-child(2n+2)
+                        margin-right 0
+                    
+@media (max-width 480px)
+    .news-container
+        .news-inner-container
+            padding 10px
+            .news-wrapper
+                .news
+                    width 100%
+                    &__title
+                        font-size 24px
+                        text-align center
+                    &__date
+                        text-align center
+                            
+    
+            

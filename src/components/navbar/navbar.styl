@@ -1,0 +1,223 @@
+.drop-shadow 
+	position relative
+	
+	background #fff
+	&:before, &:after 
+		content ""
+		position absolute
+		z-index -2
+.curved:before 
+	top 10px
+	bottom 10px
+	left 0
+	right 50%
+	box-shadow 0 0 55px #dedddc
+.curved-hz-1:before 
+	top 50%
+	bottom 0
+	left 10px
+	right 10px
+	-moz-border-radius 100px / 10px
+	border-radius 100px / 10px
+
+
+
+
+
+
+
+.navbar
+	max-width 1180px
+	width auto
+	padding-top 40px
+	.heading
+		display flex
+		justify-content space-between
+	.contact
+		padding-left 40px
+		margin-top 12px
+		padding-top 10px
+		background url('../images/phone.png') left 10% no-repeat
+		&__number
+			color $light-gray
+			text-decoration none
+			// display block
+		&__number + a
+			margin-left 15px
+			
+	.delivery
+		text-transform uppercase
+		font-size 14px
+		font-family 'helveticaneuecyr-bold'
+		color $purple
+		vertical-align middle
+		height 60px
+		line-height 60px
+		
+	.languages
+		.select
+			height 25px
+			border 1px solid $light-purple
+			border-radius 5px
+			font-size 11px
+			color $purple
+			text-transform uppercase
+			font-weight 600
+			width 80%
+			&:focus
+				outline none
+			& + select
+				margin-top 10px
+	.slogan
+		display none
+.nav
+	padding 20px 0
+	display flex
+	margin-bottom 40px
+	// background red
+	
+	.item
+		float left
+		& + .item
+			margin-left 3.2%
+		&__href
+			color $light-gray
+			text-transform uppercase
+			text-decoration none
+			font-size 14px
+			&:hover
+				color $purple
+	.toggle-button
+		width 40px
+		height 40px
+		right 280px
+		top 10px
+		display none
+		position absolute
+		background url('../images/togglebutton.jpg')
+		background-size cover
+		z-index 6
+		
+	&--right
+		width 260px
+		height 100%
+		position fixed
+		background-color #898989
+		top 0
+		margin-top 0
+		right -260px
+		display block
+		z-index 5
+		overflow-y visible
+		transition .2s ease all
+		padding 0
+		.item
+			float none
+			border-bottom 1px solid #666
+			text-transform uppercase
+			a
+				display block
+				color #fff
+				padding 10px 0 10px 10px
+				&:hover
+					color #fff
+					background-color #a8a7a7
+			.languages
+				padding 10px
+				display flex
+				.select
+					@extend .navbar .languages .select
+					width 40%
+					margin 0 auto
+					float left
+					& + .select 
+						margin-top 0
+		.item + .item
+			margin-left 0
+	.active
+		right 280px
+	&.active
+		transform translateX(-260px)
+				
+@media(max-width 1200px)
+	.navbar
+		padding-top  40px
+		.heading
+			.right-logo
+				display none
+		.slogan
+			display inline-block
+			background-color #292e64
+			text-transform uppercase
+			vertical-align middle
+			padding 10px
+			font-family 'helveticaneuecyr-bold'
+			font-size 14px
+			width 80%
+			text-align center
+			&__red
+				color #fa2727
+			&__blue
+				color #1588fe
+			&__white
+				color #fff
+		.checkout
+			max-width 40%
+			display inline-block		
+			vertical-align top
+			padding-left 40px
+			float right
+			margin-right 1px
+			color  $light-gray
+			text-decoration none
+			position relative
+			height 40px
+			line-height 40px
+			&:before
+				z-index 2
+				content ''
+				position absolute 
+				display block
+				background url('../images/cart2.png') no-repeat left center
+				left 0
+				height 40px
+				width 40px
+
+@media(max-width 991px)
+	.navbar
+		.heading
+			.contact
+				padding-top 0px
+				&__number
+					display block
+					& + a 
+						margin-left 0
+					
+				
+
+@media(max-width 680px)
+	.navbar
+		  
+		.heading
+			.contact,.delivery,.languages
+				display none
+		.slogan 
+			width 60%
+				
+		.checkout
+			margin-top 5px
+							
+@media(max-width 410px)
+	.navbar
+		.heading
+			.contact,.delivery,.languages
+				display none
+		.slogan 
+			width 60%
+			font-size .5em
+		.checkout
+			 margin-top 0
+			 font-size .8em
+				
+		
+

@@ -1,0 +1,131 @@
+.footer-navigation
+    z-index 1
+    @extends .main
+.the-footer
+    @extends .main
+    .footer
+        
+        display flex
+        flex-wrap wrap
+        .item
+           
+            margin-bottom 20px
+            margin-right 60px
+            .title
+                @extends .main .posts__heading
+                font-size 1em
+            &:last-child
+                float right
+                margin-right 0
+        .socials
+            &__icon
+                display inline-block
+                width 32px
+                height 32px
+                margin-right 5px
+                &.twitter
+                    background url('../images/socials-bar.png') no-repeat center left
+                &.klass
+                    background url('../images/socials-bar.png') no-repeat 33% 
+                &.facebook
+                    background url('../images/socials-bar.png') no-repeat 67% 
+                &.vk
+                    background url('../images/socials-bar.png') no-repeat center right
+        .documents
+            &__element
+                margin-bottom 5px
+                text-transform capitalize
+                display block
+                color #454545
+                font-size .8em
+        .currency
+            span
+                width 250px
+                display block
+                font-size .9em
+                border 1px solid #c4c4c4
+                border-radius 5px
+                padding 10px 
+                text-transform uppercase
+                color #636363
+                position relative
+                &:after
+                    content ''
+                    position absolute
+                    right 10px
+                    top 13px
+                    width 0
+                    height 0
+                    border-left 5px solid transparent
+                    border-right 5px solid transparent
+                &.up:after
+                    border-bottom 10px solid green
+                &.down:after
+                    content ''
+                    position absolute
+                    border-top 10px solid red
+        .subscribe 
+            form
+                input
+                    padding 10px 5px
+                    border-radius 5px
+                    background-color #fff
+                    width 75%
+                button
+                    @extend .button
+                    display inline
+                    height 36px
+                    border-radius 25px
+                    padding 0 
+                    border none
+                    border-color transparent
+                    background linear-gradient(#6e4c86,#290d55)
+                    transition .2s ease all
+                    cursor pointer
+                    &:hover
+                        background-position 100px
+        
+            
+@media(max-width 1199px)
+    
+        .the-footer
+            .footer
+                flex-wrap wrap-reverse
+                justify-content space-between            
+                .item
+                    flex 1 0 25%
+                    margin-right 10px
+                    .title
+                        font-size .7em
+                    
+                .subscribe
+                    form
+                        input 
+                            max-width 100%
+                        button 
+                            float right
+                
+@media(max-width 480px)
+        .the-footer
+            padding-top 0
+            &:before
+                height 40px
+            .footer
+                display block
+                
+                .item
+                    text-align center
+                    width 100%
+                    .title
+                        text-align center
+                .currency
+                    span
+                        width 100%
+                .subscribe
+                    
+                    form
+                        input 
+                            max-width 100%
+                        button 
+                            float none
+                        

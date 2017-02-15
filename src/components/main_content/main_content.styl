@@ -1,0 +1,88 @@
+
+@import '../item/item'
+.main
+    position relative
+    padding-top 40px
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    &:before
+        top 0
+        content ''
+        background url('../images/shadow.png') top center no-repeat 
+        width 100%
+        height 140px
+        position absolute
+        background-size cover
+        visibility visible
+        z-index -1
+    .posts
+        
+        float left
+        width 49%
+        &__image-wrapper
+            width 100%
+            &--image
+                width 100%
+                height auto
+                margin 0 auto
+                  
+    
+    .posts__heading
+        font-family 'helveticaneuecyr-bold'
+        color  #330154
+        font-size 19.73px
+        font-weight 900
+        text-align left
+        padding-bottom 20px
+        text-transform uppercase
+    
+    .post-card
+        width calc(100% / 2 - 10px)
+        padding 20px 0
+        
+        float left
+        & +.post-card
+            margin-left 10px
+        &__title
+            color #330154
+            font-size 13px
+            font-weight 700
+            padding-bottom 30px
+            line-height 18px
+            height 54px
+            overflow hidden
+            
+        &__content
+            color  #454545
+            font-size 13px
+            padding-bottom 20px
+            overflow hidden
+            line-height 18px
+            height 180px
+            
+        .button
+            margin-top 10px
+            
+        
+    .top-selling 
+        width 49%
+        float right
+        &__heading
+            @extend .main .posts__heading
+        &__heading:last-of-type
+            margin-top 20px
+        .items-row
+            display flex
+            flex-wrap wrap
+            justify-content space-between
+            
+@media (max-width 1199px)
+    .main
+        .posts
+            width 100%
+        .top-selling
+            width 100%
+        
+                
+    

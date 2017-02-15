@@ -1,0 +1,8 @@
+-var navbar = [{title:'Главная',href:'index.html'},{title:'О КОМПАНИИ',href:'about.html'},{title:'КАТАЛОГ ТОВАРОВ',href:'market.html'},{title:'ДОСТАВКА И ОПЛАТА',href:'delivery.html'},{title:'Новости',href:'news.html'},{title:'СТАТЬИ',href:'posts.html'},{title:'ВИДЕО',href:'video.html'},{title:'КОНТАКТНАЯ ИНФОРМАЦИЯ',href:'contacts.html'},{title:'КОРЗИНА',href:'checkout.html', className:'checkout'}]
+
+.container-fluid.nav-wrapper
+    +b.UL.nav.row.clearfix
+        each el, i in navbar
+            +b.LI.item(class=el.className)
+                +e.A.href(href=el.href) #{el.title}
+        +b.toggle-button
