@@ -31,7 +31,7 @@ if ($(window).width() < 1199) {
     ul.prepend(li);
     
 
-    $('.checkout .item__href').addClass('checkout').insertAfter('.slogan');
+    $('.navigation .item.checkout .item__href').addClass('checkout').insertAfter('.slogan');
     $('.item.checkout').remove();
     $('.footer-navigation').hide();
 }

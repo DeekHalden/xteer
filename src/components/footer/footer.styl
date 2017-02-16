@@ -1,10 +1,13 @@
 .footer-navigation
     z-index 1
+    padding-top 0
+    margin-bottom 0
     @extends .main
+    .nav
+        margin-bottom 0
 .the-footer
     @extends .main
     .footer
-        
         display flex
         flex-wrap wrap
         .item
@@ -23,6 +26,9 @@
                 width 32px
                 height 32px
                 margin-right 5px
+                transition .2s ease opacity
+                &:hover
+                    opacity .7
                 &.twitter
                     background url('../images/socials-bar.png') no-repeat center left
                 &.klass
@@ -107,7 +113,7 @@
                 
 @media(max-width 480px)
         .the-footer
-            padding-top 0
+            padding-top 40px
             &:before
                 height 40px
             .footer

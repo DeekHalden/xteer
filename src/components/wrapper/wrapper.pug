@@ -1,51 +1,11 @@
-include /mixins/main_mixins
--var image = 'assets/images/top_banner.png'
 -var item = 'assets/images/gear.png'
 -var dropdown_item = {src:'item.html', text: 'Lorem ipsum X550-zx'}
 -var i = 0
--var count = 0
+
 
 
 .container-fluid.wrapper.clearfix
-    .row.drop-shadow.curved.curved-hz-1.slider
-        +CreateSlider(0 , image, 3)
-    .row.filter
-        .filter-menu
-            while i < 6
-                +b.item
-                    +b.media
-                        +e.IMG(src=item).image
-                    +e.SPAN.text МАСЛА ТРАНСМИССИОННЫЕ
-                -i++
-        .filter-dropdown
-            +b.UL.dropdown
-                +b.LI.item несинтетические
-                    +b.UL.links-wrapper
-                        +e.LI
-                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}
-                        +e.LI
-                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}  
-                        +e.LI
-                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}    
-                        
-                +b.LI.item полусинтетические
-                    +b.UL.links-wrapper
-                        +e.LI
-                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}
-                        +e.LI
-                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}  
-                        +e.LI
-                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}    
-                
-                +b.LI.item минеральные
-                    +b.UL.links-wrapper
-                        +e.LI
-                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}
-                        +e.LI
-                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}  
-                        +e.LI
-                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}    
-            +b.close-btn
-                
+    include /components/main-slider/main-slider
+    include /components/filter/filter
             
 

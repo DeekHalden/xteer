@@ -1,5 +1,7 @@
 .filter
-    margin-top 220px
+    padding-top 40px
+    background url('../images/top_bg.png') no-repeat 
+    background-size cover
     .filter-menu
         display flex
         justify-content space-between
@@ -58,10 +60,11 @@
                     border-right 10px solid transparent
                     border-left 10px solid transparent
                     border-bottom 10px solid #330154
-                    border-left 10px solid transparent
+                    
     .filter-dropdown
-        margin-top 67px
+        margin-top 47px
         position relative
+        top 20px
         .dropdown
             display flex
             justify-content flex-start
@@ -115,10 +118,12 @@
 
 @media(max-width 1199px)
     .filter
-        margin-top 0
+        .filter-dropdown
+            margin-top 5px
         .filter-menu
             &:after
-                background transparent
+                width 100%
+                background none
             .item
                 margin 40px auto
                 

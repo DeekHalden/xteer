@@ -15,18 +15,6 @@ mixin CreatePost(itemClass, itemTitle, itemContent, buttonClass, buttonText)
         +e.A(type="button" href="" class=buttonClass).button #{buttonText}
 
 
-mixin CreateItem(itemClass, itemTitle, itemPrice, itemImg, itemBadgeClass, itemBadgeText, itemPriceOld)
-    +b(class=itemClass +"-card")
-        +e.media
-            +e.IMG(src=itemImg).media--image 
-            +e.P.media(class=itemBadgeClass+'-badge badge') #{itemBadgeText}
-            
-        +e.H2.title #{itemTitle}
-        if itemPriceOld
-            +e.SPAN.price #{itemPrice} <span class="price-old">#{itemPriceOld}</span>
-        else 
-            +e.SPAN.price #{itemPrice}
-
 mixin CreatePostCard(title, date, image, content, className)
     +b(class = className)
         +e.P.date #{date}
@@ -37,4 +25,38 @@ mixin CreatePostCard(title, date, image, content, className)
         +e.A(type="button" href="" class='button').button далее
 
 mixin CreateButton(href, text,button_class)
-    a(href=href class=button_class) #{text}
+    a(href=href, class=button_class) #{text}
+
+mixin CreateItem(itemHref ,itemClass, itemTitle, itemPrice, itemImg, itemBadgeClass, itemBadgeText, itemPriceOld)
+    +b(href= itemHref, class=itemClass +"-card")
+        +e.media
+            +e.IMG(src=itemImg).media--image 
+            +e.P.media(class=itemBadgeClass+'-badge badge') #{itemBadgeText}
+            
+        +e.H2.title #{itemTitle}
+        
+        if itemPriceOld
+            +e.SPAN.price #{itemPrice} 
+            span.price-old #{itemPriceOld}
+        else 
+            +e.SPAN.price #{itemPrice}
+
+
+mixin CreateMarketItem(itemHref ,itemClass, itemTitle, itemPrice, itemImg, itemBadgeClass, itemBadgeText, itemPriceOld, text, className, selectValues)
+    -var i = 5
+    +b(href= itemHref, class=itemClass +"-card")
+        +e.media
+            +e.IMG(src=itemImg).media--image 
+            +e.P.media(class=itemBadgeClass+'-badge badge') #{itemBadgeText}
+            
+        +e.H2.title #{itemTitle}
+        select.select
+            while i > 0 
+                option(value=selectValues) #{selectValues}
+                -i--
+        button(type="order", class=className) #{text}
+        if itemPriceOld
+            +e.SPAN.price #{itemPrice} 
+            span.price-old #{itemPriceOld}
+        else 
+            +e.SPAN.price #{itemPrice}

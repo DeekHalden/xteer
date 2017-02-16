@@ -1,0 +1,56 @@
+.about-wrapper
+    @extends .main
+    margin-bottom 40px
+    .title
+        @extends .main .posts__heading
+    .content
+        width 59%
+        
+        p
+            font-size .95em
+            line-height 1.3em
+            color #454545
+            padding-bottom 5px
+            
+    .image
+        width 40%
+        height 310px
+        display block
+        float right
+        img
+            width 100%
+            height auto
+        .btn
+            color $dark-purple
+            display block
+            width 100%
+            margin 0 auto 
+            padding 40px 0
+            font-size .8em
+            font-family 'helveticaneuecyr-bold'
+            font-weight 700
+            text-align center
+            border 1px solid transparent
+            border-radius 10px
+            background #e8e8e8 url('../images/adobe.png') no-repeat calc(50% - 120px) center
+            
+            transition .2s ease all
+            &:hover
+                color $purple
+                background #e1e1e1 url('../images/adobe.png') no-repeat calc(50% - 110px) center
+@media(max-width 1199px)
+    .about-wrapper
+        .content
+            width 100%
+
+        .image
+            width 100%
+            height auto
+            
+            float none
+            img
+                width 100%
+                height auto
+                margin-bottom 10px
+            .btn
+                margin-bottom 10px

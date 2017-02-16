@@ -1,0 +1,34 @@
+.slider
+    .lSSlideOuter
+        position absolute
+        
+        max-width 1180px
+        z-index 2   
+        left 0
+        right 0
+        top -40px
+    .drop-shadow 
+        width auto
+        left 0
+        background-color transparent
+    .curved:before 
+        box-shadow 0 0 55px #fff
+        left 2.5%
+        opacity 1
+
+    .slider-item
+        text-decoration none
+        color $light-gold
+        width 100%
+        height 100%
+        .media
+            vertical-align middle
+            &__img
+                display block
+                width 100%
+                height auto
+                margin 0 auto
+@media (max-width 1199px)
+    .slider
+        .lSSlideOuter
+            top 0px

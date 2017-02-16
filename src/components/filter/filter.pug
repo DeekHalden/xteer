@@ -3,42 +3,43 @@
 -var i = 0
 -var count = 0
 
-.row.filter
-    .filter-menu
-        while i < 6
-            +b.item
-                +b.media
-                    +e.IMG(src=item).image
-                +e.SPAN.text МАСЛА ТРАНСМИССИОННЫЕ
-            -i++
-    .filter-dropdown
-        +b.UL.dropdown
-            +b.LI.item несинтетические
-                +b.UL.links-wrapper
-                    +e.LI
-                        +e.A(href=dropdown_item.src).link #{dropdown_item.text}
-                    +e.LI
-                        +e.A(href=dropdown_item.src).link #{dropdown_item.text}  
-                    +e.LI
-                        +e.A(href=dropdown_item.src).link #{dropdown_item.text}    
-                    
-            +b.LI.item полусинтетические
-                +b.UL.links-wrapper
-                    +e.LI
-                        +e.A(href=dropdown_item.src).link #{dropdown_item.text}
-                    +e.LI
-                        +e.A(href=dropdown_item.src).link #{dropdown_item.text}  
-                    +e.LI
-                        +e.A(href=dropdown_item.src).link #{dropdown_item.text}    
+.container-fluid.filter
+    .row
+        .filter-menu
+            while i < 6
+                +b.item
+                    +b.media
+                        +e.IMG(src=item).image
+                    +e.SPAN.text МАСЛА ТРАНСМИССИОННЫЕ
+                -i++
+        .filter-dropdown
+            +b.UL.dropdown
+                +b.LI.item несинтетические
+                    +b.UL.links-wrapper
+                        +e.LI
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}
+                        +e.LI
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}  
+                        +e.LI
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}    
+                        
+                +b.LI.item полусинтетические
+                    +b.UL.links-wrapper
+                        +e.LI
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}
+                        +e.LI
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}  
+                        +e.LI
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}    
+                
+                +b.LI.item минеральные
+                    +b.UL.links-wrapper
+                        +e.LI
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}
+                        +e.LI
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}  
+                        +e.LI
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}    
+            +b.close-btn
+                
             
-            +b.LI.item минеральные
-                +b.UL.links-wrapper
-                    +e.LI
-                        +e.A(href=dropdown_item.src).link #{dropdown_item.text}
-                    +e.LI
-                        +e.A(href=dropdown_item.src).link #{dropdown_item.text}  
-                    +e.LI
-                        +e.A(href=dropdown_item.src).link #{dropdown_item.text}    
-        +b.close-btn
-            
-        

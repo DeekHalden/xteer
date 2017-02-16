@@ -1,0 +1,13 @@
+-
+    var data = {title:'Lorem ipsum Et ut Duis esse.', content:['Lorem ipsum Quis veniam elit sint laborum veniam exercitation in mollit consequat nisi Duis incididunt dolore consequat minim Excepteur ut est aute nisi pariatur velit laboris.','Lorem ipsum Cupidatat aliqua qui Duis elit mollit aute magna sunt occaecat adipisicing aliqua laborum labore do ullamco consequat voluptate laboris cillum sed.','Lorem ipsum Id non eiusmod cillum dolore nostrud amet id qui Duis veniam fugiat mollit deserunt sed cillum velit ut ad dolor et cillum elit cillum fugiat.','Lorem ipsum Quis sint veniam in est sunt do ad mollit magna in dolor sit occaecat quis consequat dolore mollit mollit et commodo elit aute in ut non culpa velit Ut proident nulla ut laborum id esse sunt amet Ut.','Lorem ipsum Nulla cupidatat ut est sed commodo irure laborum minim sit ea voluptate id mollit ut velit in nostrud anim nulla cupidatat esse amet est do veniam incididunt est dolor fugiat cupidatat culpa dolor pariatur fugiat ullamco.','Lorem ipsum Fugiat aliqua cillum do fugiat ut consectetur quis labore sit Duis sit labore est amet nostrud anim commodo deserunt in in ea nostrud aliqua eiusmod anim velit nisi laborum officia aute nulla aliquip nisi ea.','Lorem ipsum Et reprehenderit laboris ad dolore consequat Ut est officia sed consectetur magna ut dolor magna do proident enim elit eu dolor consectetur nisi minim id velit.'],image:'assets/images/smile.png'}
+
+
+.about-wrapper.container-fluid
+    .row.clearfix
+        .title #{data.title}
+        .image
+            img(src=data.image)
+            a(href="").btn ПРЕЗЕНТАЦИЯ КОМПАНИИ
+        .content 
+            each el, i in data.content
+                p= el

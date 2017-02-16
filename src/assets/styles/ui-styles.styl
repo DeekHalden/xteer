@@ -1,0 +1,51 @@
+.ui-slider-horizontal
+    height 1em
+    .ui-slider-handle
+        top -.6em
+        &:focus
+            outline none
+.ui-slider
+    .ui-slider-range
+        z-index 0
+.ui-widget-header
+    background $dark-purple
+.ui-widget-content 
+    background  url(../images/ui-bg_highlight-soft_75_8a8a8a_1x100.png) 50% 50% repeat-x;
+    .ui-state-default
+        height 20px
+        background none
+        border-radius 0
+        border-bottom 10px solid transparent
+        border-right 10px solid transparent
+        border-left 10px solid transparent
+        border-top 10px solid #330154
+.ui-corner-all 
+    border-radius 1em
+
+
+.lowest-price,.highest-price
+    display inline-block
+    color $dark-purple
+    font-size .8em
+    input
+        display inline
+        width 30px
+        border none
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button 
+        display none
+        -webkit-appearance: none
+        margin 0 /* <-- Apparently some margin are still there even though it's hidden */
+    
+.lowest-price
+    float left
+.highest-price
+    float right
+
+
+#price,#price2
+    color $dark-purple
+    font-family 'helveticaneuecyr-bold'
+
+#options 
+    width 70px

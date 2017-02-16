@@ -6,9 +6,9 @@ $('.dropdown .item').on('click',function() {
 
 $('.filter .close-btn').on('click',function() {
     console.log($(this).parent());
-    $(this).parent().hide();
+    $(this).parent().css('visibility','hidden');
 });
 
 $('.filter-menu .item').on('click',function() {
-    $('.filter-dropdown').show();
+    $('.filter-dropdown').css('visibility', 'visible');
 })
