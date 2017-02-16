@@ -1,0 +1,86 @@
+.delivery-wrapper
+    padding 40px 0 
+    .title
+        font-size 20px
+        @extends .main .posts__heading
+    .shipment-logos
+        display flex
+        // justify-content space-between
+        flex-wrap wrap
+        border 1px solid #e1e1e1
+        border-radius 7px
+        padding 20px 
+        &__image
+            margin 0 auto
+            height 80px
+            float left
+            &:first-child
+                width 210px
+                background url('../images/shipment.jpg') 4% center no-repeat 
+                margin-left 0
+            &:nth-child(2)
+                width 160px
+                background url('../images/shipment.jpg') 37% center no-repeat 
+                
+            &:nth-child(3)
+                width 105px
+                background url('../images/shipment.jpg') 60% center no-repeat 
+                
+            &:nth-child(4)
+                width 65px
+                background url('../images/shipment.jpg') 77% center no-repeat 
+            &:last-child
+                width 120px
+                background url('../images/shipment.jpg') 96% center no-repeat 
+                margin-right 0 
+    .delivery-info-wrapper
+        display flex
+        .delivery-info
+            width 49.5%
+            color #454545
+            font-size .9em
+            line-height 1.2em
+            float left
+            padding-bottom 10px
+            &:first-child
+                margin-right .5%
+            &:last-child
+                margin-left .5%    
+            &__title
+                position relative
+                margin 20px 0
+                padding 10px 10px 10px 40px
+                font-size 1em
+                font-family helveticaneuecyr-roman
+                color #fff
+                background-color $dark-purple
+                &:before
+                    content ''
+                    position absolute
+                    width 1.2em
+                    height 1.2em
+                    left 12px
+                    top 9px
+                    background url('../images/wallet.png') center center no-repeat
+                    background-size cover
+            .content
+                &__paragraph
+                    padding-bottom 20px
+            .subtitle
+                &--strong
+                    font-family helveticaneuecyr-bold
+            .list
+                list-style disc
+                margin-left 20px
+                // &__item
+                    
+@media(max-width 799px)
+    .delivery-wrapper
+        .shipment-logos
+            &__image
+                margin 0 auto !important
+        .delivery-info-wrapper
+            display block
+            .delivery-info
+                width 100%
+                margin 0 auto !important            

@@ -1,0 +1,28 @@
+-var data = {title:'Lorem ipsum Nisi ut eiusmod veniam Ut.', content:['Lorem ipsum Officia exercitation mollit tempor dolore aliquip mollit aute Excepteur ex sit in velit.','Lorem ipsum Culpa nulla dolore dolore tempor dolore Ut aliqua do officia dolor deserunt labore ea.','Lorem ipsum Excepteur ea incididunt Excepteur sit et proident qui nostrud dolore dolore commodo voluptate proident non do.','Lorem ipsum Est amet minim aliqua ea officia ut sit in sunt consequat exercitation qui esse Excepteur.'],list_content:['Lorem ipsum Excepteur dolore nostrud sit.','Lorem ipsum In sunt aliqua proident voluptate qui.','Lorem ipsum Sunt in exercitation anim.']}
+-var index = 0
+.container-fluid.delivery-wrapper
+    .row
+        p.title Доставка и оплата
+        +b.shipment-logos.clearfix
+            +e.image
+
+            +e.image
+
+            +e.image
+
+            +e.image
+
+            +e.image
+        .delivery-info-wrapper.clearfix   
+            while index < 2
+                +b.delivery-info.info
+                    +e.P.title #{data.title}
+                    +b.content
+                        each el, i in data.content
+                            +e.P.paragraph= el
+                    +e.h4.subtitle--strong Lorem ipsum Adipisicing anim cupidatat commodo.
+                    +b.UL.list 
+                        each element, index1 in data.list_content
+                            +e.LI.item= element
+                -index++
+        
