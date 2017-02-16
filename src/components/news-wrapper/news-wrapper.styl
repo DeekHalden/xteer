@@ -11,14 +11,15 @@
         .news-wrapper
             border 1px solid $light-gold
             display flex
-            // flex-wrap wrap
-            justify-content space-between
+            flex-wrap wrap
+            // justify-content space-between
             .news
-                
-                width 24%
+                margin-top 20px
+                width 23.5%
                 color #666
                 margin-right 2%
-                &:last-child
+                float right
+                &:nth-child(4n + 4)
                     margin-right 0
                 &__date
                     float right
