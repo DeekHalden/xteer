@@ -40,7 +40,7 @@ gulp.task('styles', () => {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        // .pipe( csso() )
+        .pipe( csso() )
         .pipe( rename('bundle.min.css') )
         .pipe( gulp.dest('dist/assets/css') )
         .pipe( browserSync.reload({
@@ -60,6 +60,7 @@ gulp.task('styles', () => {
 gulp.task('js', function (cb) {
   pump([
         gulp.src(['src/assets/scripts/vendor/*.js','src/assets/scripts/client/*.js','!src/assets/bemto/**/*.js']),concat('bundle.min.js'),
+        uglify(),
         gulp.dest('dist/assets/scripts')
     ],
     cb
@@ -102,12 +103,3 @@ gulp.task('default', ['indexTemplate','fonts', 'js','styles', 'browserSync'], fu
     gulp.watch('src/**/*.pug', ['indexTemplate']);
     gulp.watch('src/**/*.js', ['js']);
 });
-
-
-function swallowError (error) {
-
-  // If you want details of the error in the console
-  console.log(error.toString())
-
-  this.emit('end')
-}
