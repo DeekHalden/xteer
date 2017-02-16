@@ -47,15 +47,9 @@ gulp.task('styles', () => {
             stream: true
         }))
 })
-
-// gulp.task('rename', function() {
-//     return gulp.src(['src/pug/**/*.pug', 'src/pug/components/pages/*.pug'])
-//         .pipe(replace('.pug'))
-//         .pipe(gulp.dest('dist/files'))
-// })
-imagemin(['src/**/*.png'], 'dist/assets/images', {use: [imageminOptipng()]}).then(() => {
-    console.log('Images optimized');
-});
+// imagemin(['src/**/*.png'], 'dist/assets/images', {use: [imageminOptipng()]}).then(() => {
+//     console.log('Images optimized');
+// });
 
 gulp.task('js', function (cb) {
   pump([
@@ -82,6 +76,9 @@ gulp.task('indexTemplate', function() {
     }))
     
     .pipe(gulp.dest('dist/'))
+    .pipe( browserSync.reload({
+        stream: true
+    }))
 });
 
 gulp.task('styles-watch', ['styles'], reload);
