@@ -53,9 +53,9 @@ gulp.task('styles', () => {
 //         .pipe(replace('.pug'))
 //         .pipe(gulp.dest('dist/files'))
 // })
-// imagemin(['src/**/*.png'], 'dist/assets/images', {use: [imageminOptipng()]}).then(() => {
-//     console.log('Images optimized');
-// });
+imagemin(['src/**/*.png'], 'dist/assets/images', {use: [imageminOptipng()]}).then(() => {
+    console.log('Images optimized');
+});
 
 gulp.task('js', function (cb) {
   pump([
