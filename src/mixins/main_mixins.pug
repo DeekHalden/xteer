@@ -8,7 +8,7 @@ mixin CreateSlider(id, image, count)
                         +e.img(src=image)
             -i++
 
-mixin CreatePost(itemClass, itemTitle, itemContent, buttonClass, buttonText)
+mixin CreateMainPost(itemClass, itemTitle, itemContent, buttonClass, buttonText)
     +b(class=itemClass +"-card")
         +e.H2.title #{itemTitle}
         +e.P.content #{itemContent}

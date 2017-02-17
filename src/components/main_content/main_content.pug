@@ -16,7 +16,7 @@ include /mixins/main_mixins
                     +e.IMG(src="assets/images/oil_select.png").image-wrapper--image
 
                 while i < 2
-                    +CreatePost(post.class, post.title, post.content, post.buttonClass, post.buttonText)
+                    +CreateMainPost(post.class, post.title, post.content, post.buttonClass, post.buttonText)
                     -i++
             +b.top-selling
                 +e.H2.heading ТОП ПРОДАЖ
