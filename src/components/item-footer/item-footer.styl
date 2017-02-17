@@ -1,0 +1,24 @@
+.item-footer
+    margin 40px auto
+    @extends .main
+    // background-color red
+    .title
+        @extends .main .posts__heading
+    .items-wrapper
+        display flex
+        // justify-content space-between
+        flex-wrap wrap
+        .item-card
+            width calc(100% / 6 - 5px)
+            margin 5px auto 0 !important
+
+@media(max-width 1199px)
+    .item-footer
+        .items-wrapper
+            .item-card
+                width calc(100% / 3 - 5px)
+@media(max-width 480px)
+    .item-footer
+        .items-wrapper
+            .item-card
+                width calc(100% / 2 - 5px)

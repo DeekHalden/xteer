@@ -1,0 +1,185 @@
+.item-main-card
+    padding-top 40px
+    
+    &__title
+        @extends .main .post-card__title
+        text-transform uppercase
+        font-size 1em
+        padding-bottom 0px
+        line-height 1em
+        height auto
+    .media
+        float left
+        position relative
+        width 40%
+        border 1px solid #e1e1e1
+        border-radius 7px
+        padding 20px
+        &__image
+            display block
+            width 100%
+            height auto
+            margin 0 auto
+        &__badge
+            position absolute
+            top 0
+            left 0
+            color #fff
+            text-transform uppercase
+            background-color olive
+            padding 5px 10px
+            border-radius 7px
+            border-top-left-radius 0
+            border-top-right-radius 0
+    
+    .text
+        margin-left 41%
+        margin-top 20px
+        &__title
+            
+            @extends .main .post-card__title
+            text-transform uppercase
+            display inline-block
+            height auto
+            margin-right 20px
+            margin-bottom 20px
+            padding-bottom  0
+            font-size 1em
+            line-height 1em
+            cursor pointer
+            &--active
+                color $purple
+            &:hover
+                text-decoration underline
+            & + .text__title
+                border-left 3px solid #e8e8e8
+                padding-left 20px
+        .text-container
+            max-height 300px
+            
+            .description
+                &__element
+                    color #464646
+                    padding-bottom 10px
+                    font-size .9em
+                    line-height 1em
+            .table-description
+                width 100%
+                .table-block
+                    &:nth-child(odd)
+                        background-color  #f3f3f3
+                    &__element
+                        
+                        @extends .item-main-card .text .text-container .description__element
+                        padding 10px
+    .order-details
+        @extends .main
+        background-size cover
+        margin-left 41%
+        &:before 
+            height 50px
+        .order-form
+            display flex
+            flex-wrap wrap
+            vertical-align middle
+            width 100%
+            background-color transparent
+            .element
+                display inline
+                float left
+                margin 0 auto
+                
+                
+                vertical-align middle
+                &.quantity
+                    height 40px
+                    line-height 40px
+                    .element__select,.element__quantity
+                        display inline-block
+                        width 40%
+                        height 40px
+                        margin-left 5%
+                        border-radius 7px
+                        border 1px solid #c4c4c4
+                        border-style solid
+                        &:focus
+                            outline none
+                        
+                        
+                &:first-child
+                    margin-left 0
+                    height 40px
+                    line-height 40px
+                &:last-child
+                    margin-right 0
+                &__new,&__old
+                    font-family helveticaneuecyr-bold
+                    font-size 2em
+                &__new
+                    color $dark-purple
+                &__old
+                    color #bbbbbb
+                    text-decoration line-through
+            
+            
+            
+    .buttons-wrapper
+        @extends .main
+        margin 40px 0 0
+        width 100%
+        &:before
+            height 50px
+        
+        .btn
+            @extends .about-wrapper .image .btn
+            width 49%
+            float left
+            background #e8e8e8 url('../images/adobe.png') no-repeat calc(50% - 85px) center
+            &:hover
+                
+                background #e1e1e1 url('../images/adobe.png') no-repeat calc(50% - 80px) center
+            
+            
+            & + .btn
+                float right
+        
+                     
+@media(max-width 1199px)
+    .item-main-card
+        .media
+            width 100%
+            float none
+            &__image
+                width 50%
+        .text 
+            margin-left 0
+            &__title
+                font-size 1.5em
+        .order-details
+            margin-left 0
+@media(max-width 580px)
+    .item-main-card
+        .order-details
+            margin-left 0
+            .order-form
+                position relative
+                padding-bottom 20px
+                .element
+                    width 50%
+                    &:nth-child(2)
+                        margin-right 0
+                    &__select,&__quantity
+                        width 40%
+                    &__new, &__old
+                        display inline-block
+                        width 50%
+                        font-size 105%
+                        text-align center
+                .order-btn
+                    width 150px
+                    position absolute
+                    top 50px
+                    left calc(50% - 75px)
+                    
+        
+                        

@@ -1,0 +1,10 @@
+include /mixins/main_mixins
+-var item = {class:'item-main',title:'Xteer GSL 20W50',price:'1500 грн',oldPrice:2000,itemImg:'assets/images/item.png',badgeClass:'hot',badgeText: 'hot', description:['Lorem ipsum Incididunt et aliqua quis culpa in proident proident aliqua adipisicing dolor ut sit eiusmod dolor esse Duis dolore velit enim ut consectetur.','','Lorem ipsum Sint labore ut eiusmod consequat quis nulla aute Excepteur fugiat ex exercitation do officia Duis proident anim exercitation consectetur culpa amet enim consequat sit ullamco adipisicing nulla cupidatat irure mollit in ea deserunt.','Lorem ipsum Dolore irure exercitation Duis dolor aute sunt elit reprehenderit non ut ut in labore velit quis occaecat velit do ad in laborum tempor reprehenderit occaecat eiusmod sed est in ea.'],table_description:['Lorem ipsum Consequat','223']}
+-var i = 0
+
+.container-fluid.item-main
+    .row
+        +CreateItemDetails(item.class, item.title,
+                    item.price,item.oldPrice,
+                    item.itemImg, item.badgeClass,
+                    item.badgeText, 'Заказать', 'button', '60л', item.description, item.table_description)

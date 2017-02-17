@@ -41,22 +41,68 @@ mixin CreateItem(itemHref ,itemClass, itemTitle, itemPrice, itemImg, itemBadgeCl
         else 
             +e.SPAN.price #{itemPrice}
 
-
-mixin CreateMarketItem(itemHref ,itemClass, itemTitle, itemPrice, itemImg, itemBadgeClass, itemBadgeText, itemPriceOld, text, className, selectValues)
+mixin CreateMarketItem(itemHref,itemClass,itemTitle,itemPrice,itemImg,itemBadgeClass, itemBadgeText, itemPriceOld, button_text,className, selectValues )
     -var i = 5
     +b(href= itemHref, class=itemClass +"-card")
         +e.media
             +e.IMG(src=itemImg).media--image 
             +e.P.media(class=itemBadgeClass+'-badge badge') #{itemBadgeText}
-            
+                
         +e.H2.title #{itemTitle}
         select.select
             while i > 0 
                 option(value=selectValues) #{selectValues}
                 -i--
-        button(type="order", class=className) #{text}
+        button(type="order", class=className) #{button_text}
         if itemPriceOld
             +e.SPAN.price #{itemPrice} 
             span.price-old #{itemPriceOld}
         else 
             +e.SPAN.price #{itemPrice}
+
+
+mixin CreateItemDetails(itemClass,itemTitle,itemPrice, itemPriceOld, itemImg,itemBadgeClass, itemBadgeText,  button_text,className, selectValues, description, table_description)
+    -var i = 5
+    +b(class=itemClass +"-card clearfix")
+        +e.H2.title #{itemTitle}
+        +b.media
+            +e.IMG(src=itemImg).image 
+            +e.P.badge #{itemBadgeText}
+        +b.text
+            +e.A().title.text__title--description Описание    
+            +e.A().title.text__title--table-description Характеристики
+            .text-container    
+                +CreateDescription(description)
+
+                +CreateTableDescription(table_description)
+        +b.order-details    
+            +b.order-form.clearfix
+                +b.element.price
+                    +e.SPAN.new #{itemPrice} 
+                    +e.SPAN.old #{itemPriceOld}
+                +b.element.quantity
+                    +e.SELECT.select
+                        while i > 0 
+                            option(value=selectValues) #{selectValues}
+                            -i--
+                    +e.INPUT.quantity(type="number" value="1" min="1")
+                +b.BUTTON.element.order-btn(type="order", class=className) #{button_text}
+            +b.buttons-wrapper.clearfix
+                a(href="").btn технические данные
+                a(href="").btn доставка и оплата
+
+
+mixin CreateDescription(content)
+    +b.description
+        each el, i in content
+            +e.P.element= el
+
+
+mixin CreateTableDescription(content)
+    -var i = 0
+    +b.TABLE.table-description
+            while i < 7
+                +b.TR.table-block
+                    +e.TD.element= content[0]
+                    +e.TD.element= content[1]
+                -i++
