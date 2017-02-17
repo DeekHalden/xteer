@@ -1,24 +1,31 @@
 .new
     @extends .main
     padding-bottom 40px
-    .title
-        @extends .main .posts__heading
-    .info
-        &__image
-            width 45%
-            float left
-            padding-right 20px
-        &__content
-            color #454545
-            font-size 13px
-            line-height 18px
-            padding-bottom 20px
-            
-@media(max-width 780px)
-    .new
+    .item
+        &__date
+            font-size 11px
+            color #9a9a9a
+            margin-bottom 30px
+        .title
+            @extends .main .posts__heading
         .info
             &__image
-                width 100%
-                padding-right 0
+                width 45%
+                float left
+                padding-right 20px
+            &__content
+                color #454545
+                font-size 13px
+                line-height 18px
                 padding-bottom 20px
+                
+@media(max-width 780px)
+    .new
+        .item
+            
+            .info
+                &__image
+                    width 100%
+                    padding-right 0
+                    padding-bottom 20px
                 

@@ -15,14 +15,14 @@ mixin CreatePost(itemClass, itemTitle, itemContent, buttonClass, buttonText)
         +e.A(type="button" href="new.html" class=buttonClass).button #{buttonText}
 
 
-mixin CreatePostCard(title, date, image, content, className)
+mixin CreatePostCard(title, date, image, content, className, href)
     +b(class = className)
         +e.P.date #{date}
         +b.info.clearfix
             +e.IMG(src=image).image
-            +e.A(href="new.html").title #{title}
+            +e.A(href=href).title #{title}
             +e.P.content #{content}
-        +e.A(type="button" href="new.html" class='button').button далее
+        +e.A(type="button", href=href, class='button').button далее
 
 mixin CreateButton(href, text,button_class)
     a(href=href, class=button_class) #{text}

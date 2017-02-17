@@ -1,0 +1,7 @@
+extends /layout/news-layout
+block heading
+    .heading Еще статьи
+block content
+    while i < 4
+        +CreatePostCard(item.title, item.date, item.image, item.content, item.className, 'post.html')
+        -i++
