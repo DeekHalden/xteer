@@ -1,0 +1,5 @@
+extends /layout/news-layout
+block content
+    while i < 4
+        +CreatePostCard(item.title, item.date, item.image, item.content, item.className)
+        -i++

@@ -12,7 +12,7 @@ mixin CreatePost(itemClass, itemTitle, itemContent, buttonClass, buttonText)
     +b(class=itemClass +"-card")
         +e.H2.title #{itemTitle}
         +e.P.content #{itemContent}
-        +e.A(type="button" href="" class=buttonClass).button #{buttonText}
+        +e.A(type="button" href="new.html" class=buttonClass).button #{buttonText}
 
 
 mixin CreatePostCard(title, date, image, content, className)
@@ -20,9 +20,9 @@ mixin CreatePostCard(title, date, image, content, className)
         +e.P.date #{date}
         +b.info.clearfix
             +e.IMG(src=image).image
-            +e.A(href="post.html").title #{title}
+            +e.A(href="new.html").title #{title}
             +e.P.content #{content}
-        +e.A(type="button" href="" class='button').button далее
+        +e.A(type="button" href="new.html" class='button').button далее
 
 mixin CreateButton(href, text,button_class)
     a(href=href, class=button_class) #{text}
@@ -106,3 +106,12 @@ mixin CreateTableDescription(content)
                     +e.TD.element= content[0]
                     +e.TD.element= content[1]
                 -i++
+
+mixin CreatePost(title, date, image, content, className)
+    +b(class = className)
+        +b.P.title #{title}
+        +e.P.date #{date}
+        +b.info.clearfix
+            +e.IMG(src=image).image
+            each el, i in content
+                +e.P.content= el
