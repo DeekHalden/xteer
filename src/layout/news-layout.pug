@@ -8,10 +8,5 @@ include /mixins/main_mixins
             
             .news-wrapper.clearfix
                 block content
-.container-fluid.pagination-container
-    .row
-        +b.pagination
-            +e.A().element 1
-            +e.A().element.pagination__element--active 2
-            +e.A().element 3
+include ../components/pagination/pagination
 
