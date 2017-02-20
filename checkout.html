@@ -67,18 +67,62 @@
           </ul>
         </div>
       </div>
-      <div class="about-wrapper container-fluid">
-        <div class="row clearfix">
-          <div class="title">Lorem ipsum Et ut Duis esse.</div>
-          <div class="image"><img src="assets/images/smile.png"><a class="btn" href="">ПРЕЗЕНТАЦИЯ КОМПАНИИ</a></div>
-          <div class="content"> 
-            <p>Lorem ipsum Quis veniam elit sint laborum veniam exercitation in mollit consequat nisi Duis incididunt dolore consequat minim Excepteur ut est aute nisi pariatur velit laboris.</p>
-            <p>Lorem ipsum Cupidatat aliqua qui Duis elit mollit aute magna sunt occaecat adipisicing aliqua laborum labore do ullamco consequat voluptate laboris cillum sed.</p>
-            <p>Lorem ipsum Id non eiusmod cillum dolore nostrud amet id qui Duis veniam fugiat mollit deserunt sed cillum velit ut ad dolor et cillum elit cillum fugiat.</p>
-            <p>Lorem ipsum Quis sint veniam in est sunt do ad mollit magna in dolor sit occaecat quis consequat dolore mollit mollit et commodo elit aute in ut non culpa velit Ut proident nulla ut laborum id esse sunt amet Ut.</p>
-            <p>Lorem ipsum Nulla cupidatat ut est sed commodo irure laborum minim sit ea voluptate id mollit ut velit in nostrud anim nulla cupidatat esse amet est do veniam incididunt est dolor fugiat cupidatat culpa dolor pariatur fugiat ullamco.</p>
-            <p>Lorem ipsum Fugiat aliqua cillum do fugiat ut consectetur quis labore sit Duis sit labore est amet nostrud anim commodo deserunt in in ea nostrud aliqua eiusmod anim velit nisi laborum officia aute nulla aliquip nisi ea.</p>
-            <p>Lorem ipsum Et reprehenderit laboris ad dolore consequat Ut est officia sed consectetur magna ut dolor magna do proident enim elit eu dolor consectetur nisi minim id velit.</p>
+      <div class="container-fluid checkout-wrapper">
+        <div class="row">
+          <div class="heading">Моя корзина</div>
+          <div class="items-list clearfix">
+                  <div class="checkout-item-card clearfix">
+                    <div class="checkout-item-card__media"><img class="checkout-item-card__media--image" src="assets/images/item.png" alt="" role="presentation"/>
+                    </div><a class="checkout-item-card__title" href="item.html"> <span class="checkout-item-card__name">Xteer GSL 20W50 <br></span><span class="checkout-item-card__article">Lorem ipsum </span></a><span class="checkout-item-card__price">Стоимость <span>1500 грн</span></span><span class="checkout-item-card__quantity">Количество <br><input class="checkout-item-card__order-quantity" type="number" min="0" max="999" value="1"/>
+                    <div class="controls">
+                      <div class="up"></div>
+                      <div class="down"></div>
+                    </div></span><span class="checkout-item-card__total">Сумма <span>1500 грн</span></span><span class="checkout-item-card__close"> </span>
+                  </div>
+                  <div class="checkout-item-card clearfix">
+                    <div class="checkout-item-card__media"><img class="checkout-item-card__media--image" src="assets/images/item.png" alt="" role="presentation"/>
+                    </div><a class="checkout-item-card__title" href="item.html"> <span class="checkout-item-card__name">Xteer GSL 20W50 <br></span><span class="checkout-item-card__article">Lorem ipsum </span></a><span class="checkout-item-card__price">Стоимость <span>1500 грн</span></span><span class="checkout-item-card__quantity">Количество <br><input class="checkout-item-card__order-quantity" type="number" min="0" max="999" value="1"/>
+                    <div class="controls">
+                      <div class="up"></div>
+                      <div class="down"></div>
+                    </div></span><span class="checkout-item-card__total">Сумма <span>1500 грн</span></span><span class="checkout-item-card__close"> </span>
+                  </div>
+            <div class="checkout-btn-group">
+              <button class="button backwards-btn" href="market.html" type="button">Вернуться к покупкам</button><span class="checkout-total">ИТОГО:&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">2000 грн</span></span>
+              <button class="button checkout-btn" type="submit">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid checkout-form clearfix">
+        <div class="row">
+          <div class="form-wrapper">
+            <div class="heading">ОФОРМЛЕНИЕ ЗАКАЗА</div>
+            <FORM class="form clearfix">
+              <div class="form-section">
+                <p class="heading"><span class="order"> 1 </span> Заполните данные</p>
+                <input class="form-control" type="text" name="name" placeholder="Имя*">
+                <input class="form-control" type="number" name="tel" placeholder="Телефон">
+                <input class="form-control" type="email" name="email" placeholder="E-mail">
+                <textarea class="form-control" placeholder="Комментарий к заказу"></textarea>
+              </div>
+              <div class="form-section">
+                <p class="heading"><span class="order"> 2 </span> Выберите способ доставки</p>
+                <input class="form-control" type="text" name="name" placeholder="Имя*">
+                <input class="form-control" type="number" name="tel" placeholder="Телефон">
+                <input class="form-control" type="email" name="email" placeholder="E-mail">
+                <input class="form-control" type="text" name="name" placeholder="Имя*">
+                <div class="radio-group clearfix">
+                  <input class="form-control" type="radio" name="delivery" id="warehouse" value="warehouse-warehouse" checked>
+                  <label for="warehouse">склад-склад</label>
+                  <input class="form-control" type="radio" name="delivery" id="house" value="warehouse-house">
+                  <label for="house">склад-дом</label>
+                </div>
+              </div>
+              <div class="form-section">
+                <p class="heading"><span class="order"> 1 </span> Способ оплаты</p>
+              </div>
+            </FORM>
           </div>
         </div>
       </div>
