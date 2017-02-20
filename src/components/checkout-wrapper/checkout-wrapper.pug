@@ -1,0 +1,15 @@
+include /mixins/main_mixins
+-var item = {href:'item.html',class:'item',title:'Xteer GSL 20W50',price:'1500 грн',oldPrice:2000,itemImg:'assets/images/item.png',badgeClass:'hot',badgeText: 'hot', select_values:'60 литров'}
+-var i = 0
+
+
+
+.container-fluid.checkout-wrapper
+    .row
+        .heading Моя корзина
+        .items-list.clearfix
+            while i < 2
+                +CreateCheckoutItem(item.href, 'checkout-item', item.title, item.price, item.itemImg,item.select_values)
+                -i++
+            include ../checkout-btn-group/checkout-btn-group
+include ../checkout-form/checkout-form

@@ -1,0 +1,42 @@
+.contacts-info
+    @extends .main
+    margin-bottom 40px
+    .heading
+        @extends .main .posts__heading
+        
+    .contacts-row
+        display flex
+        width 100%
+        flex-wrap wrap
+        .contact
+            width calc(50% - 10px)
+            float left
+            margin-bottom 10px
+            &:nth-child(2n+2)
+                margin-left 20px
+            &__image
+                display inline-block
+                float left
+                // vertical-align middle
+                width 32px
+                height 32px
+                background url('../images/socials-bar.png') no-repeat center left
+            &__text
+                display inline-block
+                vertical-align middle
+                height 28px
+                overflow hidden
+                margin-left 10px
+                width 85%
+                color #636363
+                font-size 14px
+                line-height 28px
+                font-family helveticaneuecyr-light
+                
+@media(max-width 720px)
+    .contacts-info
+        .contacts-row
+            .contact
+                width 100%
+                margin-left auto !important
+                margin-right auto !important

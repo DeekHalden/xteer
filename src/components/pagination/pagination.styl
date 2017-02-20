@@ -1,9 +1,10 @@
 .pagination-container
+    
     @extends .main
     .pagination
         width 87px
-        margin 0 auto
-        margin-bottom 40px
+        margin 0  auto  40px 1px
+        
         &__element
             display inline-block
             margin 0 5px
@@ -19,3 +20,7 @@
                 color #d42e12
                 cursor pointer
                 box-shadow 12px 15px 20px 0px rgba(46,61,73,.2)
+@media(max-width 1199px)
+    .pagination-container
+        .pagination
+            margin 0 auto 40px

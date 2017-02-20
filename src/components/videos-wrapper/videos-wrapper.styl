@@ -1,0 +1,63 @@
+.videos-wrapper
+    @extends .video .items-wrapper
+    display flex
+    flex-wrap wrap
+    
+    margin-bottom 40px
+    .video-page-item
+        width calc(25% - 40px) 
+        height auto 
+        margin 10px 25px 40px 
+        
+        float left
+        text-decoration none
+        &:active 
+            outline none
+        &:hover
+            text-decoration underline
+        &:nth-child(4n+1)
+            margin-left 0 
+        &:nth-child(4n+4)
+            margin-right 0 
+        .title
+            height 36px
+            line-height 18px
+            font-size 13px
+            text-align left
+            font-family helveticaneuecyr-bold
+            color $dark-purple
+           
+        .image-wrapper
+            position relative
+            .image
+                display block
+                width 100%
+            &:hover::before
+                opacity .7
+            &::before
+                position absolute
+                transition .2s linear all
+                left 25%
+                right 25%
+                width 50%
+                height 50%
+                z-index 5
+                top 25%
+                bottom 25%
+                content ''
+                background url('../images/play-big.png') center center no-repeat
+                background-size contain
+@media(max-width  1199px)
+    .videos-wrapper
+        .video-page-item
+            width 100%
+            height auto
+            margin 0 auto
+        .lSAction > a
+            top 55%
+            z-index 2
+            
+            
+            
+            
+        

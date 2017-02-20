@@ -61,6 +61,27 @@ mixin CreateMarketItem(itemHref,itemClass,itemTitle,itemPrice,itemImg,itemBadgeC
             +e.SPAN.price #{itemPrice}
 
 
+mixin CreateCheckoutItem(itemHref,itemClass,itemTitle,itemPrice,itemImg,selectValues)
+    +b(class=itemClass +"-card").clearfix
+        +e.media
+            +e.IMG(src=itemImg).media--image 
+        +e.A(href=itemHref).title 
+            +e.name #{itemTitle} <br>
+            +e.SPAN.article Lorem ipsum 
+        +e.SPAN.price Стоимость 
+            span #{itemPrice}
+        +e.SPAN.quantity Количество <br>
+            +e.INPUT(type="number", min='0' max="999" value='1').order-quantity
+            .controls
+                .up
+                .down
+        +e.SPAN.total Сумма 
+            span #{itemPrice}
+        +e.SPAN.close 
+
+        
+
+
 mixin CreateItemDetails(itemClass,itemTitle,itemPrice, itemPriceOld, itemImg,itemBadgeClass, itemBadgeText,  button_text,className, selectValues, description, table_description)
     -var i = 5
     +b(class=itemClass +"-card clearfix")

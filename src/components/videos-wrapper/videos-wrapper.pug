@@ -1,11 +1,12 @@
 extends /layout/video-layout.pug
 
 block content
-    .items-wrapper.clearfix
-        while i < 5
-            a.video-item.youtube(
+    .videos-wrapper.clearfix
+        while i < 8
+            a.video-page-item.youtube(
                         href="http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&amp;wmode=transparent"
                     )
                 p.title Lorem ipsum Aute dolor reprehenderit id Duis.
-                img(src="assets/images/smile.png").image
+                .image-wrapper
+                    img(src="assets/images/smile.png").image
             -i++

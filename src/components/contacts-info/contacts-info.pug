@@ -1,0 +1,10 @@
+-var i = 0
+.container-fluid.contacts-info
+    .row
+        .heading Контактная информация
+        .contacts-row.clearfix
+            while i < 4
+                +b.contact.clearfix 
+                    +e.IMG(src="").image
+                    +e.SPAN.text Адресс: город Киев,  ул.Арсенальная, 9
+                -i++

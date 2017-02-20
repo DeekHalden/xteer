@@ -79,6 +79,7 @@
                     width 75%
                 button
                     @extend .button
+                    float right
                     display inline
                     height 36px
                     border-radius 25px
@@ -89,7 +90,7 @@
                     transition .2s ease all
                     cursor pointer
                     &:hover
-                        background-position 100px
+                        background-position  top right
         
             
 @media(max-width 1199px)
@@ -99,12 +100,23 @@
                 flex-wrap wrap-reverse
                 justify-content space-between            
                 .item
-                    flex 1 0 25%
+                    flex 1 0 20%
                     margin-right 10px
                     .title
                         font-size .7em
+                .socials
+                    flex 1 0 35%
                     
+                .documentation
+                    flex 1 0 20%
+                    
+                .currency
+                    flex 1 0 40%
+    
+                    span
+                        width 100%
                 .subscribe
+                    flex 0 1 100%
                     form
                         input 
                             max-width 100%
@@ -124,14 +136,12 @@
                     width 100%
                     .title
                         text-align center
-                .currency
-                    span
-                        width 100%
                 .subscribe
                     
                     form
                         input 
                             max-width 100%
                         button 
+                            margin-top 10px
                             float none
                         
