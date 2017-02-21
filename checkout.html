@@ -87,8 +87,8 @@
                       <div class="down"></div>
                     </div></span><span class="checkout-item-card__total">Сумма <span>1500 грн</span></span><span class="checkout-item-card__close"> </span>
                   </div>
-            <div class="checkout-btn-group"><a class="button backwards-btn" href="market.html" type="button">Вернуться к покупкам</a><span class="checkout-total">ИТОГО:&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">2000 грн</span></span>
-              <button class="button checkout-btn" type="submit">Заказать</button>
+            <div class="checkout-btn-group"><a class="button backwards-btn" href="market.html" type="button">Вернуться к покупкам</a>
+              <button class="button checkout-btn" type="submit">Заказать</button><span class="checkout-total">ИТОГО:&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">2000 грн</span></span>
             </div>
           </div>
         </div>
@@ -101,26 +101,61 @@
               <div class="form-section">
                 <p class="heading"><span class="order"> 1 </span> Заполните данные</p>
                 <input class="form-control" type="text" name="name" placeholder="Имя*">
-                <input class="form-control" type="number" name="tel" placeholder="Телефон">
+                <input class="form-control" type="number" name="tel" placeholder="Телефон*">
                 <input class="form-control" type="email" name="email" placeholder="E-mail">
-                <textarea class="form-control" placeholder="Комментарий к заказу"></textarea>
+                <textarea class="form-control" placeholder="Комментарий к заказу*"></textarea>
               </div>
               <div class="form-section">
                 <p class="heading"><span class="order"> 2 </span> Выберите способ доставки</p>
-                <input class="form-control" type="text" name="name" placeholder="Имя*">
-                <input class="form-control" type="number" name="tel" placeholder="Телефон">
-                <input class="form-control" type="email" name="email" placeholder="E-mail">
-                <input class="form-control" type="text" name="name" placeholder="Имя*">
-                <div class="radio-group clearfix">
-                  <input class="form-control" type="radio" name="delivery" id="warehouse" value="warehouse-warehouse" checked>
-                  <label for="warehouse">склад-склад</label>
-                  <input class="form-control" type="radio" name="delivery" id="house" value="warehouse-house">
-                  <label for="house">склад-дом</label>
+                <select class="form-control delivery-service">
+                  <option value="Новая почта">Новая почта*</option>
+                  <option value="Новая почта">Новая почта</option>
+                  <option value="Новая почта">Новая почта</option>
+                  <option value="Новая почта">Новая почта</option>
+                </select>
+                <select class="form-control region">
+                  <option value="Область">Область*</option>
+                  <option value="Область">Область</option>
+                  <option value="Область">Область</option>
+                  <option value="Область">Область</option>
+                </select>
+                <select class="form-control city">
+                  <option value="Город">Город*</option>
+                  <option value="Город">Город</option>
+                  <option value="Город">Город</option>
+                  <option value="Город">Город</option>
+                </select>
+                <select class="form-control delivery-number">
+                  <option value="Номер отделения">Номер отделения*</option>
+                  <option value="Номер отделения">Номер отделения</option>
+                  <option value="Номер отделения">Номер отделения</option>
+                  <option value="Номер отделения">Номер отделения</option>
+                </select>
+                <div class="radio-group clearfix delivery">
+                  <div class="radio-group1">
+                    <input class="form-control" type="radio" name="delivery" id="warehouse" value="warehouse-warehouse" checked>
+                    <label for="warehouse">склад-склад</label>
+                  </div>
+                  <div class="radio-group2">
+                    <input class="form-control" type="radio" name="delivery" id="house" value="warehouse-house">
+                    <label for="house">склад-дом</label>
+                  </div>
                 </div>
               </div>
               <div class="form-section">
-                <p class="heading"><span class="order"> 1 </span> Способ оплаты</p>
+                <p class="heading"><span class="order"> 3 </span> Способ оплаты</p>
+                <div class="radio-group clearfix payment">
+                  <div class="radio-group1">
+                    <input class="form-control" type="radio" name="cash" id="cash" value="cash" checked>
+                    <label for="cash">Наличный расчет</label>
+                  </div>
+                  <div class="radio-group2">
+                    <input class="form-control" type="radio" name="cash" id="no-cash" value="no-cash">
+                    <label for="no-cash">Безналичный расчет</label>
+                  </div>
+                </div>
               </div>
+              <button class="button checkout-btn button-rounded" type="submit">Оформить заказ</button>
             </FORM>
           </div>
         </div>
@@ -167,7 +202,7 @@
           <h5 class="title">Хочешь быть в курсе всех событий и акций?</h5>
           <form class="clearfix" action="" name="subscribe-form" id="subscribe-form">
             <input type="email" placeholder="Введите Ваш e-mail">
-            <button type="submit">Подписаться</button>
+            <button class="button-rounded" type="submit">Подписаться</button>
           </form>
         </div>
       </div>
