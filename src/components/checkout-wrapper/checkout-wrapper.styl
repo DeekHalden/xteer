@@ -49,7 +49,7 @@
             &__price
                 span
                     margin-top 10px
-                    color $dark-purple
+                    color $purple
                     font-family helveticaneuecyr-light
                     font-size 20px
                     display block
@@ -61,9 +61,9 @@
                     position absolute
                     width 20px
                     background linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(63, 68, 72, 0.1) 100%)
-                    height 30px
-                    right 14px
-                    top 28px
+                    height 29px
+                    left calc(50% + 5px)
+                    top calc(50% - 1px)
                     border-top-right-radius 3px
                     border-bottom-right-radius 3px
                     .up, .down
@@ -116,4 +116,64 @@
                 cursor pointer
                 &:hover
                     background-color rgba(46,61,73,.1)  
+@media(max-width 720px)
+    .checkout-wrapper
+        .items-list
+            margin-bottom 40px
+            .checkout-item-card
+                position relative
+                flex-wrap wrap
+                padding-bottom 20px
+                &__media
+                    width 30%
+                &__title
+                    margin-top 20px
+                    margin-left 10%
+                    width 60%
+                &__price,&__quantity, &__total
+                    margin-top 20px
+                &__close
+                    position absolute
+                    top 10px
+                    right 10px
+                    margin-top 0
+                    &:hover
+                        background-color rgba(46,61,73,.1)  
         
+            
+@media(max-width 480px)
+    .checkout-wrapper
+        .items-list
+    
+            .checkout-item-card
+                &__media
+                    width 100%
+                &__title
+                    margin-top 20px
+                    margin-left 0
+                    text-align center
+                    width 100%
+                &__quantity
+                    order 0
+                    flex 0 1 100%
+                    .controls
+                        left calc(50% + 5px)
+                &__price,&__total
+                    order 1
+                    margin-top 20px
+                    width 50%
+                    span
+                        margin-top 10px
+                        color $dark-purple
+                        font-family helveticaneuecyr-light
+                        font-size 20px
+                        display block
+                        
+                &__close
+                    position absolute
+                    top 10px
+                    right 10px
+                    margin-top 0
+                    &:hover
+                        background-color rgba(46,61,73,.1)  
+    

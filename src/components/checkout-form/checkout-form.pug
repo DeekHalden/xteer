@@ -6,20 +6,50 @@
                 .form-section
                     p.heading <span class="order"> 1 </span> Заполните данные
                     input(type="text" name="name" placeholder="Имя*").form-control
-                    input(type="number" name="tel" placeholder="Телефон").form-control
+                    input(type="number" name="tel" placeholder="Телефон*").form-control
                     input(type="email" name="email" placeholder="E-mail").form-control
-                    textarea(placeholder ="Комментарий к заказу").form-control
+                    textarea(placeholder ="Комментарий к заказу*").form-control
                 .form-section
                     p.heading <span class="order"> 2 </span> Выберите способ доставки
-                    input(type="text" name="name" placeholder="Имя*").form-control
-                    input(type="number" name="tel" placeholder="Телефон").form-control
-                    input(type="email" name="email" placeholder="E-mail").form-control
-                    input(type="text" name="name" placeholder="Имя*").form-control
-                    .radio-group.clearfix
-                        input(type="radio" name="delivery" id="warehouse" value="warehouse-warehouse" checked).form-control
-                        label(for="warehouse") склад-склад
-                        input(type="radio" name="delivery" id="house" value="warehouse-house").form-control
-                        label(for="house") склад-дом
+                    select.form-control.delivery-service
+                        option(value="Новая почта") Новая почта*
+                        option(value="Новая почта") Новая почта
+                        option(value="Новая почта") Новая почта
+                        option(value="Новая почта") Новая почта
+                    select.form-control.region
+                        option(value="Область") Область*
+                        option(value="Область") Область
+                        option(value="Область") Область
+                        option(value="Область") Область
+                        
+                    select.form-control.city
+                        option(value="Город") Город*
+                        option(value="Город") Город
+                        option(value="Город") Город
+                        option(value="Город") Город
+                        
+                        
+                    select.form-control.delivery-number
+                        option(value="Номер отделения") Номер отделения*
+                        option(value="Номер отделения") Номер отделения
+                        option(value="Номер отделения") Номер отделения
+                        option(value="Номер отделения") Номер отделения
+                    .radio-group.clearfix.delivery
+                        .radio-group1
+                            input(type="radio" name="delivery" id="warehouse" value="warehouse-warehouse" checked).form-control
+                            label(for="warehouse") склад-склад
+                        .radio-group2
+                            input(type="radio" name="delivery" id="house" value="warehouse-house").form-control
+                            label(for="house") склад-дом
                     
                 .form-section
-                    p.heading <span class="order"> 1 </span> Способ оплаты
+                    p.heading <span class="order"> 3 </span> Способ оплаты
+                    .radio-group.clearfix.payment
+                        .radio-group1
+                            input(type="radio" name="cash" id="cash" value="cash" checked).form-control
+                            label(for="cash") Наличный расчет
+                        .radio-group2
+                            input(type="radio" name="cash" id="no-cash" value="no-cash").form-control
+                            label(for="no-cash") Безналичный расчет
+                button(type="submit", class='button checkout-btn button-rounded') Оформить заказ
+                    

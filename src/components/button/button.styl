@@ -1,18 +1,38 @@
 .button
-	display block
-	width 100px
-	padding 9px 48px 9px 15px
-	border-radius 7px
-	border none
-	background #3c1252 url('../images/right_arrow.png') no-repeat 90% center
-	font-family 'helveticaneuecyr-roman'
-	font-size 13px
-	outline none
-	color #fff
-	text-decoration none
-	transition .2s linear all
-	cursor pointer
-	
+    display block
+    width 100px
+    padding 9px 48px 9px 15px
+    border-radius 7px
+    border none
+    background #3c1252 url('../images/right_arrow.png') no-repeat 90% center
+    font-family 'helveticaneuecyr-roman'
+    font-size 13px
+    outline none
+    color #fff
+    text-decoration none
+    transition .2s linear all
+    cursor pointer
+    
 .button:hover
-	color #000
-	background #90268e url('../images/right_arrow.png') no-repeat 95% center
+    color #000
+    background #90268e url('../images/right_arrow.png') no-repeat 95% center
+
+
+.button-rounded
+    @extend .button
+    width auto
+    float right
+    display inline
+    height 36px
+    border-radius 25px
+    
+    padding 0 10px
+    border none
+    border-color transparent
+    background linear-gradient(#6e4c86,#290d55)
+    transition .2s ease all
+    cursor pointer
+    &:hover
+         background linear-gradient(#6e4c86,#290d55)
+         color #fff
+    

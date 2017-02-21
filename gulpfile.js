@@ -1,30 +1,28 @@
+const gulp = require('gulp'),
+    csso = require('gulp-csso'),
+    uglify = require('gulp-uglify'),
+    pug = require('gulp-pug'),
+    concat = require('gulp-concat'),
+    browserSync = require('browser-sync'), // Livereload plugin needed: https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
+    reload = browserSync.reload,
+    tinylr = require('tiny-lr'),
+    marked = require('marked'), // For :markdown filter in pug
+    path = require('path'),
+    server = tinylr(),
+    rename = require('gulp-rename'),
+    imagemin = require('imagemin'),
+    imageminOptipng = require('imagemin-optipng'),
+    autoprefixer = require('gulp-autoprefixer'),
+    // sourcemaps = require('gulp-sourcemaps');
+    ttf2eot = require('gulp-ttf2eot'),
+    ttf2woff = require('gulp-ttf2woff'),
 
-const   gulp        = require('gulp'),
-        csso        = require('gulp-csso'),
-        uglify      = require('gulp-uglify'),
-        pug        = require('gulp-pug'),
-        concat      = require('gulp-concat'),
-        browserSync = require('browser-sync'), // Livereload plugin needed: https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
-        reload      = browserSync.reload,
-        tinylr      = require('tiny-lr'),
-        marked      = require('marked'), // For :markdown filter in pug
-        path        = require('path'),
-        server      = tinylr(),
-        rename      = require('gulp-rename'),
-        imagemin = require('imagemin'),
-        imageminOptipng = require('imagemin-optipng'),
-        autoprefixer = require('gulp-autoprefixer'),
-        // sourcemaps = require('gulp-sourcemaps');
-        ttf2eot = require('gulp-ttf2eot'),
-        ttf2woff = require('gulp-ttf2woff'),
-
-        pump = require('pump'),
-        replace = require('gulp-ext-replace'),
-        stylus = require('gulp-stylus'),
-        through = require('gulp-through');
-
-notify = require("gulp-notify"),
-plumber = require('gulp-plumber');
+    pump = require('pump'),
+    replace = require('gulp-ext-replace'),
+    stylus = require('gulp-stylus'),
+    through = require('gulp-through'),
+    notify = require("gulp-notify"),
+    plumber = require('gulp-plumber');
 
 gulp.task('styles', () => {
     return gulp.src('src/**/styles.styl')
@@ -40,45 +38,45 @@ gulp.task('styles', () => {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe( csso() )
-        .pipe( rename('bundle.min.css') )
-        .pipe( gulp.dest('dist/assets/css') )
-        .pipe( browserSync.reload({
+        .pipe(csso())
+        .pipe(rename('bundle.min.css'))
+        .pipe(gulp.dest('dist/assets/css'))
+        .pipe(browserSync.reload({
             stream: true
         }))
 })
-// imagemin(['src/**/*.png'], 'dist/assets/images', {use: [imageminOptipng()]}).then(() => {
-//     console.log('Images optimized');
-// });
+    // imagemin(['src/**/*.png'], 'dist/assets/images', {use: [imageminOptipng()]}).then(() => {
+    //     console.log('Images optimized');
+    // });
 
-gulp.task('js', function (cb) {
-  pump([
-        gulp.src(['src/assets/scripts/vendor/*.js','src/assets/scripts/client/*.js','!src/assets/bemto/**/*.js']),concat('bundle.min.js'),
-        uglify(),
-        gulp.dest('dist/assets/scripts')
-    ],
-    cb
-  );
+gulp.task('js', function(cb) {
+    pump([
+            gulp.src(['src/assets/scripts/vendor/*.js', 'src/assets/scripts/client/*.js', '!src/assets/bemto/**/*.js']), concat('bundle.min.js'),
+            uglify(),
+            gulp.dest('dist/assets/scripts')
+        ],
+        cb
+    );
 });
 
-gulp.task('fonts',/*['ttf2eot', 'ttf2woff'],*/ function() {
-  return gulp.src('src/**/*.otf')
-    .pipe( gulp.dest('dist/assets/fonts'));
+gulp.task('fonts', /*['ttf2eot', 'ttf2woff'],*/ function() {
+    return gulp.src('src/**/*.otf')
+        .pipe(gulp.dest('dist/assets/fonts'));
 });
 
 
 gulp.task('indexTemplate', function() {
-  return gulp.src('src/pages/*.pug')
-    .pipe(plumber())
-    .pipe(pug({
-      pretty: true,
-      basedir: 'src'
-    }))
-    
+    return gulp.src('src/pages/*.pug')
+        .pipe(plumber())
+        .pipe(pug({
+            pretty: true,
+            basedir: 'src'
+        }))
+
     .pipe(gulp.dest('dist/'))
-    .pipe( browserSync.reload({
-        stream: true
-    }))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 
 gulp.task('styles-watch', ['styles'], reload);
@@ -95,8 +93,8 @@ gulp.task('browserSync', function() {
 /**
  * Serve and watch the pug files for changes
  */
-gulp.task('default', ['indexTemplate','fonts', 'js','styles', 'browserSync'], function() {
-    gulp.watch(['src/**/*.styl','src/**/*.css'], ['styles-watch']);
+gulp.task('default', ['indexTemplate', 'fonts', 'js', 'styles', 'browserSync'], function() {
+    gulp.watch(['src/**/*.styl', 'src/**/*.css'], ['styles-watch']);
     gulp.watch('src/**/*.pug', ['indexTemplate']);
     gulp.watch('src/**/*.js', ['js']);
 });
