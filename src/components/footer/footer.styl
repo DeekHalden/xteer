@@ -5,7 +5,7 @@
     @extends .main
     .nav
         margin-bottom 0
-.the-footer
+.footer-wrapper
     @extends .main
     .footer
         display flex
@@ -76,12 +76,15 @@
                     padding 10px 5px
                     border-radius 5px
                     background-color #fff
+                    border 1px solid #c4c4c4
                     width 75%
+                    &:focus
+                        outline none
                 
             
 @media(max-width 1199px)
     
-        .the-footer
+        .footer-wrapper
             .footer
                 flex-wrap wrap-reverse
                 justify-content space-between            
@@ -110,7 +113,7 @@
                             float right
                 
 @media(max-width 480px)
-        .the-footer
+        .footer-wrapper
             padding-top 40px
             &:before
                 height 40px

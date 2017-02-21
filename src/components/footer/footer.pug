@@ -1,6 +1,6 @@
 .container-fluid.footer-navigation
     include /components/navbar/navigation
-.container-fluid.the-footer
+.container-fluid.footer-wrapper
     .row.footer
         +b.socials.item.clearfix
             h5.title мы в соцсетях
@@ -19,6 +19,6 @@
         +b.subscribe.item.clearfix
             h5.title Хочешь быть в курсе всех событий и акций?
             form(action="" name="subscribe-form" id="subscribe-form").clearfix
-                input(type="email" placeholder="Введите Ваш e-mail")
-                button(type="submit").button-rounded Подписаться
+                input(type="email" placeholder="Введите Ваш e-mail" data-validation="email" data-validation-error-msg="Недействительный адрес почты")
+                button(type="submit").button.button--rounded Подписаться
 

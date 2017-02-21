@@ -13,26 +13,23 @@
     transition .2s linear all
     cursor pointer
     
-.button:hover
-    color #000
-    background #90268e url('../images/right_arrow.png') no-repeat 95% center
-
-
-.button-rounded
-    @extend .button
-    width auto
-    float right
-    display inline
-    height 36px
-    border-radius 25px
-    
-    padding 0 10px
-    border none
-    border-color transparent
-    background linear-gradient(#6e4c86,#290d55)
-    transition .2s ease all
-    cursor pointer
     &:hover
-         background linear-gradient(#6e4c86,#290d55)
-         color #fff
-    
+        color #000
+        background #90268e url('../images/right_arrow.png') no-repeat 95% center
+        
+    &--rounded
+        width auto
+        float right
+        display inline
+        height 36px
+        border-radius 25px
+        padding 0 10px
+        border none
+        border-color transparent
+        background linear-gradient(#6e4c86,#290d55)
+        transition .2s ease all
+        cursor pointer
+        &:hover
+             background linear-gradient(#6e4c86,#290d55)
+             color #fff
+        

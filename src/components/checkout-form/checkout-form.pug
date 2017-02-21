@@ -1,39 +1,36 @@
+-var states = ["АР Крым,Винницкая область,Волынская область,Днепропетровская область,Донецкая область,Житомирская область,Закарпатская область,Запорожская область,Ивано-Франковская область,Киевская область,Кировоградская область,Луганская область,Львовская область,Николаевская область,Одесская область,Полтавская область,Ровенская область,Сумская область,Тернопольская область,Харьковская область,Херсонская область,Хмельницкая область,Черкасская область,Черниговская область,Черновицкая область"]
+
 .container-fluid.checkout-form.clearfix
     .row
         .form-wrapper
-            .heading ОФОРМЛЕНИЕ ЗАКАЗА
-            FORM.form.clearfix
+            h1.heading ОФОРМЛЕНИЕ ЗАКАЗА
+            p.subheading * Обязательные для заполнения поля
+            FORM.form.clearfix(action="" id="checkout-form")
                 .form-section
-                    p.heading <span class="order"> 1 </span> Заполните данные
-                    input(type="text" name="name" placeholder="Имя*").form-control
-                    input(type="number" name="tel" placeholder="Телефон*").form-control
-                    input(type="email" name="email" placeholder="E-mail").form-control
-                    textarea(placeholder ="Комментарий к заказу*").form-control
+                    p.heading Заполните данные
+                    .control-group
+                        input(type="text" name="name" placeholder="Имя*" data-validation="length alphanumeric" data-validation-length="3-42"  data-validation-error-msg="Имя не может быть короче 3 символов").form-control
+                    .control-group
+                        input(type="number" name="tel" placeholder="Телефон*"  data-validation="length number" data-validation-length="10"  data-validation-error-msg="Введите номер в формате XXX XXX XX XX").form-control
+                    .control-group
+                        input(type="text" name="email" placeholder="E-mail" data-validation="email" data-validation-error-msg="Недействительный адрес почты").form-control
+                    .control-group
+                        textarea(placeholder ="Комментарий к заказу").form-control
                 .form-section
-                    p.heading <span class="order"> 2 </span> Выберите способ доставки
-                    select.form-control.delivery-service
-                        option(value="Новая почта") Новая почта*
-                        option(value="Новая почта") Новая почта
-                        option(value="Новая почта") Новая почта
-                        option(value="Новая почта") Новая почта
-                    select.form-control.region
-                        option(value="Область") Область*
-                        option(value="Область") Область
-                        option(value="Область") Область
-                        option(value="Область") Область
+                    p.heading Выберите способ доставки
+                    .control-group
+                        input(name="delivery" type="text" placeholder="Достака*" data-sanitize="trim" data-validation="length" data-suggestions="Новая почта, Интайм, Деливери, Самовывоз" data-validation-length="3-42" data-validation-error-msg="Введите тип доставки").form-control.delivery
                         
-                    select.form-control.city
-                        option(value="Город") Город*
-                        option(value="Город") Город
-                        option(value="Город") Город
-                        option(value="Город") Город
+                    .control-group
+                        input(name="state" type="text" placeholder="Введите область*" data-sanitize="trim" data-validation="length" data-suggestions=states, data-validation-length="3-42" data-validation-error-msg="Введите область").form-control.state
                         
-                        
-                    select.form-control.delivery-number
-                        option(value="Номер отделения") Номер отделения*
-                        option(value="Номер отделения") Номер отделения
-                        option(value="Номер отделения") Номер отделения
-                        option(value="Номер отделения") Номер отделения
+                    .control-group
+                        input(name="city" type="text" placeholder="Введите город*" data-sanitize="trim" data-validation="length" data-validation-length="3-42" data-validation-error-msg="Введите город").form-control.city
+                            
+                            
+                    .control-group    
+                        input(name="country" type="text" placeholder="Номер отделения*" data-validation="length" data-validation-length="min1" data-validation-error-msg="Введите номер отделения").form-control.city
+
                     .radio-group.clearfix.delivery
                         .radio-group1
                             input(type="radio" name="delivery" id="warehouse" value="warehouse-warehouse" checked).form-control
@@ -43,7 +40,7 @@
                             label(for="house") склад-дом
                     
                 .form-section
-                    p.heading <span class="order"> 3 </span> Способ оплаты
+                    p.heading Способ оплаты
                     .radio-group.clearfix.payment
                         .radio-group1
                             input(type="radio" name="cash" id="cash" value="cash" checked).form-control
@@ -51,5 +48,5 @@
                         .radio-group2
                             input(type="radio" name="cash" id="no-cash" value="no-cash").form-control
                             label(for="no-cash") Безналичный расчет
-                button(type="submit", class='button checkout-btn button-rounded') Оформить заказ
+                    button(type="submit", class='button checkout-btn button--rounded') Оформить заказ
                     
