@@ -1,4 +1,4 @@
-if ($(window).width() < 1199) {
+if ($(window).innerWidth() < 1189) {
     var nav = $('.nav');
     var body = $(document.body);
     var button = $('.toggle-button');
@@ -29,9 +29,5 @@ if ($(window).width() < 1199) {
     var ul = $('.nav');
     li.append(languages);
     ul.prepend(li);
-    
-
-    $('.navigation .item.checkout .item__href').addClass('checkout').insertAfter('.slogan');
-    $('.item.checkout').remove();
     $('.footer-navigation').hide();
 }

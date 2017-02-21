@@ -19,18 +19,12 @@
 	right 10px
 	-moz-border-radius 100px / 10px
 	border-radius 100px / 10px
-
-
-
-
-
-
-
 .navbar
 	max-width 1180px
 	width auto
 	padding-top 40px
 	padding-bottom 20px
+	position relative
 	.heading
 		display flex
 		justify-content space-between
@@ -71,6 +65,30 @@
 				margin-top 10px
 	.slogan
 		display none
+	.checkout
+			max-width 40%
+			height 40px
+			right 1px
+			bottom  -48px
+			display inline-block		
+			position absolute
+			vertical-align top
+			line-height 40px
+			padding-left 40px
+			float right
+			cursor pointer
+			margin-right 1px
+			color  $light-gray
+			text-decoration none
+			&:before
+				z-index 2
+				content ''
+				position absolute 
+				display block
+				background url('../images/cart2.png') no-repeat left center
+				left 0
+				height 40px
+				width 40px
 .nav
 	background url('../images/shadow.png') center top no-repeat
 
@@ -82,7 +100,7 @@
 	.item
 		float left
 		& + .item
-			margin-left 3.2%
+			margin-left 3%
 		&__href
 			color $light-gray
 			text-transform uppercase
@@ -113,7 +131,7 @@
 		display block
 		z-index 5
 		overflow-y visible
-		transition .2s ease all
+		transition .2s ease transform
 		padding 0
 		.item
 			float none
@@ -143,7 +161,7 @@
 	&.active
 		transform translateX(-260px)
 				
-@media(max-width 1200px)
+@media(max-width 1199px)
 	.navbar
 		padding  40px 10px 5px
 		.heading
@@ -166,26 +184,9 @@
 			&__white
 				color #fff
 		.checkout
-			max-width 40%
-			display inline-block		
-			vertical-align top
-			padding-left 40px
-			float right
-			margin-right 1px
-			color  $light-gray
-			text-decoration none
 			position relative
-			height 40px
-			line-height 40px
-			&:before
-				z-index 2
-				content ''
-				position absolute 
-				display block
-				background url('../images/cart2.png') no-repeat left center
-				left 0
-				height 40px
-				width 40px
+			top 0
+			padding-right 15px
 
 @media(max-width 991px)
 	.navbar
