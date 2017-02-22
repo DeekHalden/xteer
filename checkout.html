@@ -27,7 +27,7 @@
                   </option>
                 </select>
                 <select class="select">
-                  <option class="select__option">uah
+                  <option class="select__option">грн
                   </option>
                   <option class="select__option">rur
                   </option>
@@ -38,8 +38,8 @@
               <div class="right-logo"><img class="right-logo__img" src="assets/images/levada_logo.png" alt="" role="presentation"/>
               </div>
             </div>
-            <div class="slogan lg-hidden"> <span class="slogan__blue">Левада</span><span class="slogan__red">ойл</span><span class="slogan__white">Официальный представитель в украине</span>
-            </div><a class="checkout" href="checkout.html">Корзина</a>
+            <div class="slogan lg-hidden"> <span class="slogan__blue">Левада </span><span class="slogan__red">ойл </span><span class="slogan__white">  Официальный представитель в украине</span>
+            </div><a class="checkout" href="checkout.html">Корзина &nbsp;&nbsp;&nbsp;<span class="checkout__quantity">(2)</span></a>
           </div>
         </div>
         <div class="container-fluid nav-wrapper">
@@ -85,7 +85,7 @@
                       <div class="down"></div>
                     </div></span><span class="checkout-item-card__total">Сумма <span>1500 грн</span></span><span class="checkout-item-card__close"> </span>
                   </div>
-            <div class="checkout-btn-group"><a class="button backwards-btn" href="market.html" type="button">Вернуться к покупкам</a>
+            <div class="checkout-btn-group clearfix"><a class="button backwards-btn" href="market.html" type="button">Вернуться к покупкам</a>
               <button class="button checkout-btn" type="submit">Заказать</button><span class="checkout-total">ИТОГО:&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">3000 грн</span></span>
             </div>
           </div>
@@ -124,7 +124,7 @@
                   <input class="form-control city" name="city" type="text" placeholder="Введите город*" data-sanitize="trim" data-validation="length" data-validation-length="3-42" data-validation-error-msg="Введите город">
                 </div>
                 <div class="control-group">   
-                  <input class="form-control city" name="country" type="text" placeholder="Номер отделения*" data-validation="length" data-validation-length="min1" data-validation-error-msg="Введите номер отделения">
+                  <input class="form-control city" name="country" type="number" placeholder="Номер отделения*" data-validation="length" data-validation-length="min1" data-validation-error-msg="Введите номер отделения">
                 </div>
                 <div class="radio-group clearfix delivery">
                   <div class="radio-group1">
@@ -198,15 +198,17 @@
           <h5 class="title">мы в соцсетях</h5><a class="socials__icon twitter" href="https://twitter.com" target="_blank"></a><a class="socials__icon klass" href="https://odnoklassniki.com" target="_blank"></a><a class="socials__icon facebook" href="https://facebook.com" target="_blank"></a><a class="socials__icon vk" href="https://vk.com" target="_blank"></a>
         </div>
         <div class="documents item clearfix">
-          <h5 class="title">документация</h5><a class="documents__element" href="">документация</a><a class="documents__element" href="">сертификаты</a>
+          <h5 class="title">документация</h5><a class="documents__element" href="">документы</a><a class="documents__element" href="">сертификаты</a>
         </div>
         <div class="currency item clearfix">
-          <h5 class="title">курс валют</h5><span class="down">Курс нбу : usd - 30.000</span>
+          <h5 class="title">курс нбу</h5><span class="down">Курс нбу : usd - 30.000</span>
         </div>
         <div class="subscribe item clearfix">
           <h5 class="title">Хочешь быть в курсе всех событий и акций?</h5>
           <form class="clearfix" action="" name="subscribe-form" id="subscribe-form">
-            <input type="email" placeholder="Введите Ваш e-mail" data-validation="email" data-validation-error-msg="Недействительный адрес почты">
+            <div class="control">
+              <input type="email" placeholder="Введите Ваш e-mail" data-validation="email" data-validation-error-msg="Недействительный адрес почты">
+            </div>
             <button class="button button--rounded" type="submit">Подписаться</button>
           </form>
         </div>
