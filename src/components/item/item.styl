@@ -1,4 +1,5 @@
 .item-card
+    height 250px
     text-decoration none
     width 31%
     position relative
@@ -8,6 +9,8 @@
     z-index 0
     float left
     transition .2s ease all
+    &--order
+        height 340px
     &:hover
         box-shadow 12px 15px 20px 0px rgba(46,61,73,.2)        
     &__media
@@ -51,7 +54,7 @@
         float right
         margin-right 20px
 .item-card:nth-child(2)
-    margin 0 20px       
+    margin 0 auto       
 .item-card:hover
     border-color #d2c7d9
     border-width 1px
@@ -60,6 +63,7 @@
 @media (max-width 1199px)
     .item-card
         width 31%
+        height auto
 
 
 @media (max-width 580px)

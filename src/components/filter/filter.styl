@@ -8,6 +8,7 @@
         justify-content space-between
         position relative
         flex-wrap wrap
+        z-index 0
         &:after
             position absolute
             content ''
@@ -20,7 +21,7 @@
             z-index -1
         .item
             height 130px
-            width calc(1180px / 6.5)
+            width calc(1060px / 6.5)
             cursor pointer
             &:hover .media__image
                 bottom 128px
@@ -95,15 +96,16 @@
                     z-index 1
                     &--block
                         display block
-                    &__link
-                        padding 10px
-                        margin-top 10px
-                        cursor pointer
-                        display block
-                        text-decoration none
-                        color #fff
-                        &:hover
-                            color $purple
+                    .element
+                        &__link
+                            padding 10px
+                            
+                            cursor pointer
+                            display block
+                            text-decoration none
+                            color #fff
+                            &:hover
+                                color $purple
         .close-btn
             position absolute
             right 0
@@ -122,12 +124,23 @@
         padding-bottom 40px
         .filter-dropdown
             margin-top 5px
+            .dropdown
+                padding 0
+                .item
+                    
+                    padding 15px 0
+                    &__text
+                        padding-left 10px
+                    .links-wrapper
+                        .element
+                            border-bottom 1px solid #160124
         .filter-menu
             &:after
                 width 100%
                 background none
             .item
                 margin 40px auto
+                
                 
 
 
@@ -138,7 +151,48 @@
             .dropdown
                 display block
                 .item
-                    margin 20px 0
-                    // .links-wrapper
+                    position relative
+                    padding 15px 0
+                    margin-right 0
+                    &::after
                         
+                        content ''
+                        position absolute
+                        background url('../images/down.png') no-repeat center center
+                        width 20px
+                        height 20px
+                        top 15px
+                        right 10px
+                        transition .2s ease all
+                        
+                    &--active
+                        &::after
+                            content ''
+                            position absolute
+                            transform rotate(-180deg)
+                                    
+                    
+                    &__text
+                        padding-left 10px
+                    .links-wrapper
+                        margin-top 15px
+                        position initial
+                        left 0
+                        background-color #570f6b
+                        width 100%
+                        .element
+                            border-bottom 1px solid #160124
+                            position relative
+                            &::after
+                                content ''
+                                position absolute
+                                background url('../images/right.png') no-repeat center center
+                                width 20px
+                                height 20px
+                                top 8px
+                                right 10px
+            .close-btn
+                display none
+                            
+                    
             

@@ -1,3 +1,7 @@
+.item-main
+    .aside-filters
+        @extends .market .aside-filters
+
 .item-main-card
     padding-top 40px
     
@@ -5,13 +9,13 @@
         @extends .main .post-card__title
         text-transform uppercase
         font-size 1em
-        padding-bottom 0px
+        padding-bottom 34px
         line-height 1em
         height auto
     .media
         float left
         position relative
-        width 40%
+        width 450px
         border 1px solid #e1e1e1
         border-radius 7px
         padding 20px
@@ -33,7 +37,7 @@
             border-top-right-radius 0
     
     .text
-        margin-left 41%
+        margin-left 470px
         margin-top 20px
         &__title
             
@@ -72,15 +76,39 @@
                         
                         @extends .item-main-card .text .text-container .description__element
                         padding 10px
+            .add-info
+                width 100%
+                margin 52px 0 42px
+                font-family helveticaneuecyr-bold
+                font-size 12px
+                &__article
+                    color #6d6d6d
+                
+                &__avialable
+                    position relative
+                    text-transform uppercase
+                    color #2d8439
+                    margin-left 28px
+                    padding-left 21px
+                    &::before
+                        content ''
+                        position absolute
+                        left 0
+                        top 0px
+                        height 12px
+                        width 12px
+                        border-radius 100%
+                        background-color #2d8439
     .order-details
         @extends .main
         background-size cover
-        margin-left 41%
+        margin-left 470px
         &:before 
             height 50px
         .order-form
             display flex
             flex-wrap wrap
+            justify-content flex-start
             vertical-align middle
             width 100%
             background-color transparent
@@ -89,40 +117,41 @@
                 float left
                 margin 0 auto
                 
-                
-                vertical-align middle
                 &.quantity
-                    height 40px
-                    line-height 40px
+                    height 32px
+                    line-height 32px
+                    
                     .element__select,.element__quantity
+                        text-align center
                         display inline-block
-                        width 40%
-                        height 40px
-                        margin-left 5%
+                        width 100px
+                        height 32px
                         border-radius 7px
                         border 1px solid #c4c4c4
                         border-style solid
                         &:focus
                             outline none
-                        
+                    .element__quantity
+                        margin-left 5px
+                        width 82px
                         
                 &:first-child
                     margin-left 0
-                    height 40px
-                    line-height 40px
+                    height 32px
+                    line-height 32px
                 &:last-child
                     margin-right 0
                 &__new,&__old
                     font-family helveticaneuecyr-bold
-                    font-size 2em
+                    font-size 2rem
                 &__new
                     color $dark-purple
                 &__old
+                    margin 0 auto
                     color #bbbbbb
                     text-decoration line-through
-            
-            
-            
+                .btn
+                    width 100px
     .buttons-wrapper
         @extends .main
         margin 40px 0 0
@@ -133,53 +162,63 @@
         .btn
             @extends .about-wrapper .image .btn
             width 49%
+            height 88px
+            
             float left
             background #e8e8e8 url('../images/adobe.png') no-repeat calc(50% - 85px) center
             &:hover
                 
-                background #e1e1e1 url('../images/adobe.png') no-repeat calc(50% - 80px) center
+                background #e1e1e1 url('../images/adobe.png') no-repeat calc(50% - 90px) center
             
             
             & + .btn
                 float right
-        
-                     
+                
 @media(max-width 1199px)
     .item-main-card
         .media
-            width 100%
+            width 60%
+            margin 0 auto
             float none
             &__image
-                width 50%
-        .text 
+                max-width 100%
+        .text
+            
             margin-left 0
-            &__title
-                font-size 1.5em
+            .text-container
+                .add-info
+                    text-align center
         .order-details
+            width 100%
             margin-left 0
-@media(max-width 580px)
+        
+@media(max-width 720px)
+    .item-main-card
+        .media
+            width 100%
+        .order-details
+            .order-form
+                .quantity
+                    margin-right 0
+                .order-btn
+                    display block            
+                    margin 20px calc(50% - 50px) 0
+        .buttons-wrapper
+            padding-bottom 0
+@media(max-width 480px)
     .item-main-card
         .order-details
-            margin-left 0
             .order-form
-                position relative
-                padding-bottom 20px
-                .element
-                    width 50%
-                    &:nth-child(2)
-                        margin-right 0
-                    &__select,&__quantity
-                        width 40%
-                    &__new, &__old
-                        display inline-block
-                        width 50%
-                        font-size 105%
-                        text-align center
-                .order-btn
-                    width 150px
-                    position absolute
-                    top 50px
-                    left calc(50% - 75px)
+                .price
+                    width 100%
+                    display flex
+                    justify-content center
+                    &>*
+                        margin 0 auto
                     
-        
-                        
+                .quantity
+                    margin-right auto
+                    margin-top 20px
+                .order-btn
+                    display block            
+                    margin 20px calc(50% - 50px) 0

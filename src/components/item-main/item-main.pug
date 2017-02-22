@@ -4,6 +4,9 @@ include /mixins/main_mixins
 
 .container-fluid.item-main
     .row
+        +CreateAsideFilter('aside-filters aside-filters--item-page-hidden')
+        include /components/breadcrumbs/breadcrumbs
+
         +CreateItemDetails(item.class, item.title,
                     item.price,item.oldPrice,
                     item.itemImg, item.badgeClass,

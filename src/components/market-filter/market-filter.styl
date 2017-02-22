@@ -1,6 +1,8 @@
 .aside-filters
     width calc(1180px / 6)
     padding-bottom 20px
+    &--item-page-hidden
+        display none
     .collapse-btn
         display none
     .group 
@@ -29,6 +31,8 @@
     .aside-filters
         width 100%
         padding-bottom 0
+        &--item-page-hidden
+            display block
         .collapse-btn
             @extend .button
             display block
@@ -46,6 +50,8 @@
             background linear-gradient(#6e4c86,#290d55)
             transition .2s ease all
             cursor pointer
+            &:hover 
+                background #90268e
         .group
             background-color #f0f0f0
             border 1px solid #dddddd

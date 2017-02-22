@@ -14,31 +14,34 @@
                 -i++
         .filter-dropdown
             +b.UL.dropdown
-                +b.LI.item несинтетические
+                +b.LI.item 
+                    +e.P.text несинтетические
                     +b.UL.links-wrapper
-                        +e.LI
+                        +b.LI.element
                             +e.A(href=dropdown_item.src).link #{dropdown_item.text}
-                        +e.LI
+                        +b.LI.element
                             +e.A(href=dropdown_item.src).link #{dropdown_item.text}  
-                        +e.LI
+                        +b.LI.element
                             +e.A(href=dropdown_item.src).link #{dropdown_item.text}    
                         
-                +b.LI.item полусинтетические
+                +b.LI.item
+                    +e.P.text полусинтетические
                     +b.UL.links-wrapper
-                        +e.LI
+                        +b.LI.element
                             +e.A(href=dropdown_item.src).link #{dropdown_item.text}
-                        +e.LI
+                        +b.LI.element
                             +e.A(href=dropdown_item.src).link #{dropdown_item.text}  
-                        +e.LI
+                        +b.LI.element
                             +e.A(href=dropdown_item.src).link #{dropdown_item.text}    
                 
-                +b.LI.item минеральные
+                +b.LI.item 
+                    +e.P.text минеральные
                     +b.UL.links-wrapper
-                        +e.LI
+                        +b.LI.element
                             +e.A(href=dropdown_item.src).link #{dropdown_item.text}
-                        +e.LI
+                        +b.LI.element
                             +e.A(href=dropdown_item.src).link #{dropdown_item.text}  
-                        +e.LI
+                        +b.LI.element
                             +e.A(href=dropdown_item.src).link #{dropdown_item.text}    
             +b.close-btn
                 

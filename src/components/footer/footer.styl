@@ -7,19 +7,17 @@
         margin-bottom 0
 .footer-wrapper
     @extends .main
+    margin-bottom 20px
     .footer
         display flex
         flex-wrap wrap
+        justify-content space-between
         .item
-           
+            float left
             margin-bottom 20px
-            margin-right 60px
             .title
                 @extends .main .posts__heading
                 font-size 1em
-            &:last-child
-                float right
-                margin-right 0
         .socials
             &__icon
                 display inline-block
@@ -71,43 +69,56 @@
                     position absolute
                     border-top 10px solid red
         .subscribe 
+            float right
+            height auto
+            position relative
             form
-                input
-                    padding 10px 5px
-                    border-radius 5px
-                    background-color #fff
-                    border 1px solid #c4c4c4
+                .control
                     width 75%
-                    &:focus
-                        outline none
-                
+                    display inline-block
+                    input
+                        width 100%
+                        padding 10px 5px
+                        border-radius 5px
+                        background-color #fff
+                        border 1px solid #c4c4c4
+                        &:focus
+                            outline none
+                .help-block.form-error
+                    position absolute
+                    bottom -20px
+                    color red
+                    
             
 @media(max-width 1199px)
     
         .footer-wrapper
             .footer
                 flex-wrap wrap-reverse
-                justify-content space-between            
+                
+                flex-direction row-reverse
                 .item
-                    flex 1 0 20%
-                    margin-right 10px
+                    margin-top 10px    
+                    
                     .title
                         font-size .7em
                 .socials
                     flex 1 0 35%
-                    
-                .documentation
+                    order 3
+                    margin 10px auto
+                .documents
                     flex 1 0 20%
-                    
+                    order 2
                 .currency
                     flex 1 0 40%
-    
+                    order 1 
                     span
                         width 100%
                 .subscribe
                     flex 0 1 100%
+                    order 4
                     form
-                        input 
+                        .control 
                             max-width 100%
                         button 
                             float right
@@ -118,19 +129,38 @@
             &:before
                 height 40px
             .footer
-                display block
                 
                 .item
+                    flex 0 1 100%
                     text-align center
                     width 100%
+                    margin 20px auto
                     .title
                         text-align center
                 .subscribe
-                    
+                    order 4
+                    width 100%
                     form
-                        input 
-                            max-width 100%
+                        .control
+                            width 50%
+                            input 
+                                max-width 100%
                         button 
                             margin-top 10px
                             float none
+                .currency
+                    margin 20px auto
+                    flex 0 1 250px
+                    
+                .documents
+                    order 2
+                    &__element
+                        display inline-block
+                        width auto
+                        &:first-child
+                            margin-left auto
+                            margin-right 15px
+                        &:last-child
+                            margin-right auto
+                            margin-left 15px
                         

@@ -10,15 +10,16 @@
             +e.A(href="https://vk.com" target="_blank").icon.vk
         +b.documents.item.clearfix
             h5.title документация
-            +e.A(href="").element документация
+            +e.A(href="").element документы
             +e.A(href="").element сертификаты
         +b.currency.item.clearfix
-            h5.title курс валют
+            h5.title курс нбу
             span.down Курс нбу : usd - 30.000
  
         +b.subscribe.item.clearfix
             h5.title Хочешь быть в курсе всех событий и акций?
             form(action="" name="subscribe-form" id="subscribe-form").clearfix
-                input(type="email" placeholder="Введите Ваш e-mail" data-validation="email" data-validation-error-msg="Недействительный адрес почты")
+                .control
+                    input(type="email" placeholder="Введите Ваш e-mail" data-validation="email" data-validation-error-msg="Недействительный адрес почты")
                 button(type="submit").button.button--rounded Подписаться
 

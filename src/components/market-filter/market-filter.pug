@@ -1,37 +1,3 @@
--var category_filter = [{title:'для легковых авто',id:'light'},{title:'для легковых авто',id:'heavy'},{title: 'трансмиссионные',id:'transmission'},{title:'olorem',id:'olorem'},{title:'oipsum',id:'oipsum'},{title:'смазки',id:'grease'}]
+include /mixins/main_mixins
 
-.aside-filters
-    +b.BUTTON.collapse-btn Фильтр товаров!
-    +b.group.price
-        +e.A(href="").title Цена
-        #slider_price.price-slider
-        form.clearfix#price-slider
-            label.lowest-price(for="price") от
-                input(type="number" name="price" id="price") 
-
-            label.highest-price(for="price2") до   
-                input(type="number" name="price2" id="price2")
-    +b.group.category
-        +e.A(href="").title Категория
-        form
-            each el, i in category_filter
-                Label(for=el.id) <input type="checkbox" id=el.id name=el.id>  #{el.title}
-                
-            
-
-    +b.group.type
-        +e.A(href="").title Тип масла
-        form
-            each el, i in category_filter
-                Label(for=el.id) <input type="checkbox" id=el.id name=el.id>  #{el.title}
-
-    +b.group.volume
-        +e.A(href="").title Объём
-        form
-            each el, i in category_filter
-                Label(for=el.id) <input type="checkbox" id=el.id name=el.id>  #{el.title}
-    +b.group.acticle
-        +e.A(href="").title Маркировка
-        form
-            each el, i in category_filter
-                Label(for=el.id) <input type="checkbox" id=el.id name=el.id>  #{el.title}
++CreateAsideFilter('aside-filters')

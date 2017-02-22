@@ -43,7 +43,7 @@ mixin CreateItem(itemHref ,itemClass, itemTitle, itemPrice, itemImg, itemBadgeCl
 
 mixin CreateMarketItem(itemHref,itemClass,itemTitle,itemPrice,itemImg,itemBadgeClass, itemBadgeText, itemPriceOld, button_text,className, selectValues )
     -var i = 5
-    +b(href= itemHref, class=itemClass +"-card")
+    +b(href= itemHref, class=itemClass+ '-card '+itemClass +'-card--order')
         +e.media
             +e.IMG(src=itemImg).media--image 
             +e.P.media(class=itemBadgeClass+'-badge badge') #{itemBadgeText}
@@ -96,6 +96,9 @@ mixin CreateItemDetails(itemClass,itemTitle,itemPrice, itemPriceOld, itemImg,ite
                 +CreateDescription(description)
 
                 +CreateTableDescription(table_description)
+                +b.add-info
+                    +e.SPAN.article Lorem ipsum 
+                    +e.SPAN.avialable есть в наличии
         +b.order-details    
             +b.order-form.clearfix
                 +b.element.price
@@ -136,3 +139,44 @@ mixin CreatePost(title, date, image, content, className)
             +e.IMG(src=image).image
             each el, i in content
                 +e.P.content= el
+
+
+mixin CreateAsideFilter(className)
+    -var category_filter = [{title:'для легковых авто',id:'light'},{title:'для легковых авто',id:'heavy'},{title: 'трансмиссионные',id:'transmission'},{title:'olorem',id:'olorem'},{title:'oipsum',id:'oipsum'},{title:'смазки',id:'grease'}]
+
+    div(class=className)
+
+        +b.BUTTON.collapse-btn Фильтр товаров
+        +b.group.price
+            +e.A(href="").title Цена
+            #slider_price.price-slider
+            form.clearfix#price-slider
+                label.lowest-price(for="price") от
+                    input(type="number" name="price" id="price") 
+
+                label.highest-price(for="price2") до   
+                    input(type="number" name="price2" id="price2")
+        +b.group.category
+            +e.A(href="").title Категория
+            form
+                each el, i in category_filter
+                    Label(for=el.id) <input type="checkbox" id=el.id name=el.id>  #{el.title}
+                    
+                
+
+        +b.group.type
+            +e.A(href="").title Тип масла
+            form
+                each el, i in category_filter
+                    Label(for=el.id) <input type="checkbox" id=el.id name=el.id>  #{el.title}
+
+        +b.group.volume
+            +e.A(href="").title Объём
+            form
+                each el, i in category_filter
+                    Label(for=el.id) <input type="checkbox" id=el.id name=el.id>  #{el.title}
+        +b.group.acticle
+            +e.A(href="").title Маркировка
+            form
+                each el, i in category_filter
+                    Label(for=el.id) <input type="checkbox" id=el.id name=el.id>  #{el.title}

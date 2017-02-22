@@ -1,12 +1,13 @@
 .checkout-btn-group
     .backwards-btn
-            width auto
-            float left
-            padding 9px 15px  9px 32px
-            background #3c1252 url('../images/left_arrow.png') no-repeat 7% center
-            
-            &:hover
-                background #90268e url('../images/left_arrow.png') no-repeat 2% center
+        
+        width auto
+        float left
+        padding 9px 15px  9px 32px
+        background #3c1252 url('../images/left_arrow.png') no-repeat 7% center
+        
+        &:hover
+            background #90268e url('../images/left_arrow.png') no-repeat 2% center
             
     .checkout-total
         float right
@@ -28,15 +29,29 @@
     .checkout-btn-group
         .backwards-btn
             text-align center
-            width 70%
+            width 45%
             margin 20px auto 0
-            float none
+            
         .checkout-total
             display block
             margin 10px auto 0
             float none
             text-align center
         .checkout-btn
-            width 50%
+            width 45%
             margin 20px auto 0
+            
+@media(max-width 480px)
+    .checkout-btn-group
+        padding-top 40px
+        position relative
+        .checkout-total
+            top 0px
+            right 25%
+            left 25%
+            position absolute
+            text-align center
+        .backwards-btn,.checkout-btn
+            width auto
+            display block
             float none
