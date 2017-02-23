@@ -11,7 +11,7 @@
                     .control-group
                         input(type="text" name="name" placeholder="Имя*" data-validation="length alphanumeric" data-validation-length="3-42"  data-validation-error-msg="Имя не может быть короче 3 символов").form-control
                     .control-group
-                        input(type="number" name="tel" placeholder="Телефон*"  data-validation="length number" data-validation-length="10"  data-validation-error-msg="Введите номер в формате XXX XXX XX XX").form-control
+                        input(type="number" name="tel" placeholder="Телефон*"  data-validation="length number" data-validation-length="max10"  data-validation-error-msg="Введите номер в формате XXX XXX XX XX").form-control
                     .control-group
                         input(type="text" name="email" placeholder="E-mail" data-validation="email" data-validation-error-msg="Недействительный адрес почты").form-control
                     .control-group

@@ -69,11 +69,12 @@
         min-height 46px
         top 14px
         .dropdown
+            margin-right 40px
             display flex
             justify-content flex-start
             flex-wrap wrap
             background $dark-purple /*url('../images/close.png') no-repeat right center*/
-            
+            justify-content space-between
             padding 15px
             
             .item
@@ -89,8 +90,10 @@
                 &:hover
                     color $purple
                 .links-wrapper
-                    width 200px
+                    width 196px
                     left -15px
+                    border-right 1px solid transparent
+                    top 28px
                     position absolute
                     display none
                     background-color $dark-purple
@@ -109,12 +112,12 @@
                                 color $purple
         .close-btn
             position absolute
-            right -5px
+            right -0px
             top 0 
             width 51px
             height 44px
-            background url('../images/close.png') no-repeat 
-            background-size contain
+            background url('../images/close.png') no-repeat center center
+            background-size cover
             cursor pointer
 					
 			
@@ -128,6 +131,7 @@
             .dropdown
                 padding 0
                 display block
+                margin-right 0
                 .item
                     position relative
                     padding 15px 0
