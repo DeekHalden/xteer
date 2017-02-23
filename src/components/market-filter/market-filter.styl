@@ -14,16 +14,19 @@
             font-size .8em
             text-decoration none
             color #636363
+            margin-bottom 20px
         &.price
             .price-slider
-                margin-top 20px
+                margin-top 40px
         label
+            
             display block
-            margin 5px 0
             color #636363
             font-size .8em
             cursor pointer
             transition .2s linear all
+            margin-bottom 13px
+            input
             &:hover
                 opacity .8
                 
@@ -37,21 +40,22 @@
             @extend .button
             display block
             width 100%
-            height 50px
+            height 86px
             margin-top 40px
             margin-bottom 5px
-            border-radius 25px
+            border-radius 43px
             padding 0 
+            padding-left 13%
             border none
             border-color transparent
             font-size 1.2em
             font-family helveticaneuecyr-bold
             text-transform uppercase
-            background linear-gradient(#6e4c86,#290d55)
+            background #330154 url('../images/filt.png') no-repeat calc(50% - 90px) center
             transition .2s ease all
             cursor pointer
             &:hover 
-                background #90268e
+                background #90268e url('../images/filt.png') no-repeat calc(50% - 120px) center
         .group
             background-color #f0f0f0
             border 1px solid #dddddd
@@ -59,6 +63,7 @@
             &__title
                 position relative
                 margin-left 10px
+                margin-bottom 20px
                 &:after
                     font-family helveticaneuecyr-bold
                     content '+'

@@ -1,4 +1,4 @@
--var item = 'assets/images/gear.png'
+-var item = ['assets/images/gear.png', 'assets/images/cargo.png','assets/images/car.png','assets/images/hydro.png','assets/images/grease.png','assets/images/facility.png']
 -var dropdown_item = {src:'item.html', text: 'Lorem ipsum X550-zx'}
 -var i = 0
 -var count = 0
@@ -9,11 +9,40 @@
             while i < 6
                 +b.item
                     +b.media
-                        +e.IMG(src=item).image
+                        +e.IMG(src=item[i]).image
                     +e.SPAN.text МАСЛА ТРАНСМИССИОННЫЕ
                 -i++
         .filter-dropdown
             +b.UL.dropdown
+                +b.LI.item 
+                    +e.P.text несинтетические
+                    +b.UL.links-wrapper
+                        +b.LI.element
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}
+                        +b.LI.element
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}  
+                        +b.LI.element
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}    
+                        
+                +b.LI.item
+                    +e.P.text полусинтетические
+                    +b.UL.links-wrapper
+                        +b.LI.element
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}
+                        +b.LI.element
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}  
+                        +b.LI.element
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}    
+                
+                +b.LI.item 
+                    +e.P.text минеральные
+                    +b.UL.links-wrapper
+                        +b.LI.element
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}
+                        +b.LI.element
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}  
+                        +b.LI.element
+                            +e.A(href=dropdown_item.src).link #{dropdown_item.text}
                 +b.LI.item 
                     +e.P.text несинтетические
                     +b.UL.links-wrapper

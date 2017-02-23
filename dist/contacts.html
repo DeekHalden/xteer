@@ -19,12 +19,18 @@
               </div>
               <div class="languages">
                 <select class="select">
-                  <option class="select__option">ru
+                  <option class="select__option" value="ru" data-iconurl="assets/images/ru.png">ru
                   </option>
-                  <option class="select__option">ua
+                  <p class="select__mask">
+                  </p>
+                  <option class="select__option" value="ua" data-iconurl="assets/images/ua.jpg">ua
                   </option>
-                  <option class="select__option">en
+                  <p class="select__mask">
+                  </p>
+                  <option class="select__option" valiue="en" data-iconurl="assets/images/en.png">en
                   </option>
+                  <p class="select__mask">
+                  </p>
                 </select>
                 <select class="select">
                   <option class="select__option">грн
@@ -38,7 +44,7 @@
               <div class="right-logo"><img class="right-logo__img" src="assets/images/levada_logo.png" alt="" role="presentation"/>
               </div>
             </div>
-            <div class="slogan lg-hidden"> <span class="slogan__blue">Левада </span><span class="slogan__red">ойл </span><span class="slogan__white">  Официальный представитель в украине</span>
+            <div class="slogan slogan--lg-hidden"> <span class="slogan__blue">Левада </span><span class="slogan__red">ойл </span><span class="slogan__white">  Официальный представитель в украине</span>
             </div><a class="checkout" href="checkout.html">Корзина &nbsp;&nbsp;&nbsp;<span class="checkout__quantity">(2)</span></a>
           </div>
         </div>
@@ -66,7 +72,7 @@
         </div>
       </div>
     </div>
-    <div class="wrapper">
+    <div class="contacts-wrapper">
       <div class="container-fluid contacts-map">
         <div id="map"></div>
       </div>
@@ -116,7 +122,7 @@
           <h5 class="title">мы в соцсетях</h5><a class="socials__icon twitter" href="https://twitter.com" target="_blank"></a><a class="socials__icon klass" href="https://odnoklassniki.com" target="_blank"></a><a class="socials__icon facebook" href="https://facebook.com" target="_blank"></a><a class="socials__icon vk" href="https://vk.com" target="_blank"></a>
         </div>
         <div class="documents item clearfix">
-          <h5 class="title">документация</h5><a class="documents__element" href="">документы</a><a class="documents__element" href="">сертификаты</a>
+          <h5 class="title">документы</h5><a class="documents__element" href="">документация</a><a class="documents__element" href="">сертификаты</a>
         </div>
         <div class="currency item clearfix">
           <h5 class="title">курс нбу</h5><span class="down">Курс нбу : usd - 30.000</span>
@@ -133,8 +139,8 @@
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://maps.google.com/maps/api/js?callback=initMap" async defer></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script src="assets/scripts/bundle.min.js"></script>
+    <script src="https://maps.google.com/maps/api/js?callback=initMap" async defer></script>
   </body>
 </html>

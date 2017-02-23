@@ -11,9 +11,14 @@
                     +e.P.text Доставка по всей украине
                 +b.languages
                     +b.SELECT.select
-                        +e.OPTION.option ru
-                        +e.OPTION.option ua
-                        +e.OPTION.option en
+                        +e.OPTION.option(value="ru" data-iconurl="assets/images/ru.png") ru
+                        +e.P.mask
+                        +e.OPTION.option(value="ua" data-iconurl="assets/images/ua.jpg") ua
+                        +e.P.mask
+                        +e.OPTION.option(valiue="en" data-iconurl="assets/images/en.png") en
+                        +e.P.mask
+
+
                     +b.SELECT.select
                         +e.OPTION.option грн
                         +e.OPTION.option rur
@@ -21,7 +26,7 @@
         			
                 +b.right-logo
                     +e.IMG(src="assets/images/levada_logo.png").img
-            +b.slogan.lg-hidden 
+            +b.slogan.slogan--lg-hidden 
                 span.slogan__blue Левада 
                 span.slogan__red ойл 
                 span.slogan__white   Официальный представитель в украине

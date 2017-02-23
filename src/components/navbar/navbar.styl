@@ -1,239 +1,286 @@
 .drop-shadow 
-	position relative
-	
-	background #fff
-	&:before, &:after 
-		content ""
-		position absolute
-		z-index -2
+    position relative
+    
+    background #fff
+    &:before, &:after 
+        content ""
+        position absolute
+        z-index -2
 .curved:before 
-	top 10px
-	bottom 10px
-	left 0
-	right 50%
-	box-shadow 0 0 55px #dedddc
+    top 10px
+    bottom 10px
+    left 0
+    right 50%
+    box-shadow 0 0 55px #dedddc
 .curved-hz-1:before 
-	top 50%
-	bottom 0
-	left 10px
-	right 10px
-	-moz-border-radius 100px / 10px
-	border-radius 100px / 10px
+    top 50%
+    bottom 0
+    left 10px
+    right 10px
+    -moz-border-radius 100px / 10px
+    border-radius 100px / 10px
 .navbar
-	max-width 1060px
-	width auto
-	padding-top 40px
-	padding-bottom 20px
-	position relative
-	.heading
-		display flex
-		justify-content space-between
-		margin-bottom 10px
-	.contact
-		padding-left 40px
-		margin-top 12px
-		padding-top 10px
-		font-size 14px
-		background url('../images/phone.png') left 10% no-repeat
-		&__number
-			color $light-gray
-			text-decoration none
-			// display block
-		&__number + a
-			margin-left 15px
-			
-	.delivery
-		text-transform uppercase
-		font-size 14px
-		font-family 'helveticaneuecyr-bold'
-		color $purple
-		vertical-align middle
-		height 60px
-		line-height 60px
-		
-	.languages
-		width 58px
-		.select
-			height 25px
-			border 1px solid $light-purple
-			border-radius 5px
-			font-size 11px
-			color $purple
-			text-transform uppercase
-			font-weight 600
-			width 100%
-			&:focus
-				outline none
-			& + select
-				margin-top 10px
-	.slogan
-		display none
-	.checkout
-			display none
-			max-width 40%
-			height 40px
-			right 1px
-			bottom  -48px
-			
-			position absolute
-			vertical-align top
-			line-height 40px
-			padding-left 40px
-			float right
-			cursor pointer
-			margin-right 1px
-			color  $light-gray
-			text-decoration none
-			&:before
-				z-index 2
-				content ''
-				position absolute 
-				display block
-				background url('../images/cart2.png') no-repeat left center
-				left 0
-				height 40px
-				width 40px
+    
+    padding-top 40px
+    padding-bottom 20px
+    position relative
+    .heading
+        display flex
+        justify-content space-between
+        margin-bottom 10px
+    .contact
+        padding-left 40px
+        margin-top 12px
+        padding-top 10px
+        font-size 14px
+        background url('../images/phone.png') left 10% no-repeat
+        &__number
+            color $light-gray
+            text-decoration none
+            // display block
+        &__number + a
+            margin-left 15px
+            
+    .delivery
+        text-transform uppercase
+        font-size 14px
+        font-family 'helveticaneuecyr-bold'
+        color $purple
+        vertical-align middle
+        height 60px
+        line-height 60px
+        
+    .languages
+        width 58px
+        .select
+            height 25px
+            border 1px solid $light-purple
+            border-radius 5px
+            font-size 11px
+            color $purple
+            text-transform uppercase
+            font-weight 600
+            width 100%
+            &:focus
+                outline none
+            & + select
+                margin-top 10px
+            &__option
+                position relative
+            
+                    
+    .down
+        width 250px
+        margin 15px 0
+        vertical-align middle
+        font-size .9em
+        border 1px solid #c4c4c4
+        border-radius 5px
+        padding 10px 
+        text-transform uppercase
+        color #636363
+        position relative
+        &:after
+            content ''
+            position absolute
+            right 10px
+            top 13px
+            width 0
+            height 0
+            border-left 5px solid transparent
+            border-right 5px solid transparent
+        &.up:after
+            border-bottom 10px solid green
+        &.down:after
+            content ''
+            position absolute
+            border-top 10px solid red
+    .slogan
+        display none
+    .checkout
+            display none
+            max-width 40%
+            height 40px
+            right 1px
+            bottom  -48px
+            
+            position absolute
+            vertical-align top
+            line-height 40px
+            padding-left 40px
+            float right
+            cursor pointer
+            margin-right 1px
+            color  $light-gray
+            text-decoration none
+            &:before
+                z-index 2
+                content ''
+                position absolute 
+                display block
+                background url('../images/cart2.png') no-repeat left center
+                left 0
+                height 40px
+                width 40px
+            &__quantity
+                font-family helveticaneuecyr-bold
+    
 .nav
-	background url('../images/shadow.png') center top no-repeat
+    background url('../images/shadow.png') center top no-repeat
 
-	padding 20px 0
-	display flex
-	justify-content space-between 
-	// background red
-	
-	.item
-		float left
-		
-		display block
-		& + .item
-			margin-left 3%
-		&__href
-		
-			color $light-gray
-			text-transform uppercase
-			text-decoration none
-			font-size 14px
-			&:hover
-				color $purple
-	.toggle-button
-		width 40px
-		height 40px
-		right 280px
-		top 10px
-		display none
-		position absolute
-		background url('../images/togglebutton.jpg')
-		background-size cover
-		z-index 6
-		cursor pointer
-		
-	&--right
-		width 260px
-		height 100%
-		position fixed
-		background-color #898989
-		top 0
-		margin-top 0
-		right -260px
-		display block
-		z-index 5
-		overflow-y visible
-		transition .2s ease transform
-		padding 0
-		.item
-			
-			float none
-			border-bottom 1px solid #666
-			text-transform uppercase
-			a
-				display block
-				color #fff
-				padding 10px 0 10px 10px
-				&:hover
-					color #fff
-					background-color #a8a7a7
-			.languages
-				padding 10px
-				display flex
-				.select
-					@extend .navbar .languages .select
-					width 40%
-					margin 0 auto
-					float left
-					& + .select 
-						margin-top 0
-		.item + .item
-			margin-left 0
-	.active
-		right 280px
-	&.active
-		transform translateX(-260px)
-				
+    padding 20px 0
+    display flex
+    justify-content space-between 
+    // background red
+    
+    .item
+        float left
+        
+        display block
+        & + .item
+            margin-left 3%
+        &__href
+        
+            color $light-gray
+            text-transform uppercase
+            text-decoration none
+            font-size 14px
+            &:hover
+                color $purple
+    .toggle-button
+        width 40px
+        height 40px
+        right 280px
+        top 10px
+        display none
+        position absolute
+        background url('../images/togglebutton.jpg') no-repeat center center
+        background-size 100% 100%
+        transition .5s ease all
+        z-index 6
+        cursor pointer
+        &--active
+            background url('../images/button-close.png') no-repeat center center
+            background-size 100% 100%
+        
+    &--right
+        width 260px
+        height 100%
+        position fixed
+        background-color #898989
+        top 0
+        margin-top 0
+        right -260px
+        display block
+        z-index 5
+        overflow-y visible
+        transition .2s ease transform
+        padding 0
+        .item
+            
+            float none
+            border-bottom 1px solid #666
+            text-transform uppercase
+            & > a
+                display block
+                color #fff
+                padding 10px 0 10px 10px
+                &:hover
+                    color #fff
+                    background-color #a8a7a7
+            .languages
+                padding 10px
+                .select
+                    @extend .navbar .languages .select
+                    height 30px
+                    display block
+                    width 50px
+                    margin 0 auto
+                    float none
+                    cursor pointer
+                .selectboxit-container
+                    display block
+                    margin-bottom 10px
+                    .selectboxit-options
+                    
+                        left 31.5%
+                    .selectboxit-btn
+                        background-image none
+                        background-color #fff
+        .item + .item
+            margin-left 0
+        
+    .active
+        right 280px
+    &.active
+        transform translateX(-260px)
+                
 @media(max-width 1199px)
-	.navbar
-		padding  40px 10px 5px
-		.heading
-			.right-logo
-				display none
-		.slogan
-			display inline-block
-			background-color #292e64
-			text-transform uppercase
-			vertical-align middle
-			padding 10px
-			font-family 'helveticaneuecyr-bold'
-			font-size 14px
-			width 75%
-			text-align center
-			&__red
-				color #fa2727
-			&__blue
-				color #1588fe
-			&__white
-				color #fff
-		.checkout
-			display inline-block
-			position relative
-			top 0
-			padding-right 15px
+    .navbar
+        padding  40px 0 5px
+        .heading
+            .right-logo
+                display none
+        .slogan
+            display inline-block
+            background-color #292e64
+            text-transform uppercase
+            vertical-align middle
+            padding 10px
+            font-family 'helveticaneuecyr-bold'
+            font-size 14px
+            width 75%
+            text-align center
+            &__red
+                color #fa2727
+            &__blue
+                color #1588fe
+            &__white
+                color #fff
+        .checkout
+            display inline-block
+            position relative
+            top 0
+            padding-right 15px
 
 @media(max-width 991px)
-	.navbar
-		.heading
-			.contact
-				padding-top 0px
-				&__number
-					display block
-					& + a 
-						margin-left 0
-		.checkout
-			padding-right 15px
-					
-				
+    .navbar
+        .heading
+            .contact
+                padding-top 0px
+                &__number
+                    display block
+                    & + a 
+                        margin-left 0
+        .checkout
+            padding-right 15px
+                    
+                
 
 @media(max-width 680px)
-	.navbar
-		  
-		.heading
-			.contact,.delivery,.languages
-				display none
-		.slogan 
-			width 60%
-				
-		.checkout
-			margin-top 5px
-							
+    .navbar
+          
+        .heading
+            .contact,.delivery,.languages
+                display none
+        .slogan 
+            width 60%
+                
+        .checkout
+            margin-top 5px
+                            
 @media(max-width 410px)
-	.navbar
-		.heading
-			.contact,.delivery,.languages
-				display none
-		.slogan 
-			width 60%
-			font-size .5em
-		.checkout
-			 margin-top 0
-			 font-size .8em
-				
-		
+    .navbar
+        .heading
+            .contact,.delivery,.languages
+                display none
+        .slogan 
+            width 60%
+            font-size .5em
+        .checkout
+             margin-top 0
+             font-size .7em
+             padding-right 0
+                
+        
 

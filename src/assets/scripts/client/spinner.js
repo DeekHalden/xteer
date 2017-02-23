@@ -1,4 +1,5 @@
-$('.checkout-item-card__order-quantity').on('change input', function() {
+$('.checkout-item-card__order-quantity, .element__quantity, .form-control--number').on('change input', function() {
+    console.log(this);
     var value = $(this).val();
     if (value > 999) {
         $(this).val(999);

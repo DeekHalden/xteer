@@ -38,7 +38,7 @@
     
     .text
         margin-left 470px
-        margin-top 20px
+        
         &__title
             
             @extends .main .post-card__title
@@ -54,7 +54,9 @@
             &--active
                 color $purple
             &:hover
-                text-decoration underline
+                color $purple
+            
+                
             & + .text__title
                 border-left 3px solid #e8e8e8
                 padding-left 20px
@@ -183,7 +185,7 @@
             &__image
                 max-width 100%
         .text
-            
+            margin-top 20px
             margin-left 0
             .text-container
                 .add-info

@@ -1,5 +1,5 @@
 .filter
-    padding-top 40px
+    padding-top 60px
     
     background url('../images/top_bg.png') no-repeat 
     background-size cover
@@ -46,7 +46,7 @@
                 display block
                 color $purple
                 text-align center
-                font-size 1em
+                font-size 14px
                 height 3em
                 line-height 1em
                 position relative
@@ -66,7 +66,8 @@
     .filter-dropdown
         margin-top 47px
         position relative
-        top 20px
+        min-height 46px
+        top 14px
         .dropdown
             display flex
             justify-content flex-start
@@ -79,7 +80,7 @@
                
                 font-family 'helveticaneuecyr-bold'
                 color #fff
-                font-size .9em
+                font-size 12px
                 text-transform uppercase
                 margin-right 30px            
                 cursor pointer
@@ -108,12 +109,12 @@
                                 color $purple
         .close-btn
             position absolute
-            right 0
+            right -5px
             top 0 
             width 51px
-            height 46px
+            height 44px
             background url('../images/close.png') no-repeat 
-            background-size cover
+            background-size contain
             cursor pointer
 					
 			
@@ -126,20 +127,60 @@
             margin-top 5px
             .dropdown
                 padding 0
+                display block
                 .item
-                    
+                    position relative
                     padding 15px 0
+                    margin-right 0
+                    &::after
+                        
+                        content ''
+                        position absolute
+                        background url('../images/down.png') no-repeat center center
+                        width 20px
+                        height 20px
+                        top 15px
+                        right 10px
+                        transition .2s ease all
+                        
+                    &--active
+                        &::after
+                            content ''
+                            position absolute
+                            transform rotate(-180deg)
+                                    
+                    
                     &__text
                         padding-left 10px
                     .links-wrapper
+                        margin-top 15px
+                        position initial
+                        left 0
+                        background-color #570f6b
+                        width 100%
                         .element
                             border-bottom 1px solid #160124
+                            position relative
+                            &::after
+                                content ''
+                                position absolute
+                                background url('../images/right.png') no-repeat center center
+                                width 20px
+                                height 20px
+                                top 8px
+                                right 10px
+               .close-btn
+                    display none
+                            
         .filter-menu
             &:after
                 width 100%
                 background none
             .item
                 margin 40px auto
+                &__text
+                    &:after 
+                        border 0
                 
                 
 
@@ -191,8 +232,6 @@
                                 height 20px
                                 top 8px
                                 right 10px
-            .close-btn
-                display none
-                            
+         
                     
             
