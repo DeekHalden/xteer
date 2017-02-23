@@ -19,12 +19,18 @@
               </div>
               <div class="languages">
                 <select class="select">
-                  <option class="select__option">ru
+                  <option class="select__option" value="ru" data-iconurl="assets/images/ru.png">ru
                   </option>
-                  <option class="select__option">ua
+                  <p class="select__mask">
+                  </p>
+                  <option class="select__option" value="ua" data-iconurl="assets/images/ua.jpg">ua
                   </option>
-                  <option class="select__option">en
+                  <p class="select__mask">
+                  </p>
+                  <option class="select__option" valiue="en" data-iconurl="assets/images/en.png">en
                   </option>
+                  <p class="select__mask">
+                  </p>
                 </select>
                 <select class="select">
                   <option class="select__option">грн
@@ -38,7 +44,7 @@
               <div class="right-logo"><img class="right-logo__img" src="assets/images/levada_logo.png" alt="" role="presentation"/>
               </div>
             </div>
-            <div class="slogan lg-hidden"> <span class="slogan__blue">Левада </span><span class="slogan__red">ойл </span><span class="slogan__white">  Официальный представитель в украине</span>
+            <div class="slogan slogan--lg-hidden"> <span class="slogan__blue">Левада </span><span class="slogan__red">ойл </span><span class="slogan__white">  Официальный представитель в украине</span>
             </div><a class="checkout" href="checkout.html">Корзина &nbsp;&nbsp;&nbsp;<span class="checkout__quantity">(2)</span></a>
           </div>
         </div>
@@ -124,7 +130,7 @@
                   <input class="form-control city" name="city" type="text" placeholder="Введите город*" data-sanitize="trim" data-validation="length" data-validation-length="3-42" data-validation-error-msg="Введите город">
                 </div>
                 <div class="control-group">   
-                  <input class="form-control city" name="country" type="number" placeholder="Номер отделения*" data-validation="length" data-validation-length="min1" data-validation-error-msg="Введите номер отделения">
+                  <input class="form-control form-control--number" name="number" type="number" placeholder="Номер отделения*" data-validation="length" data-validation-length="min1" data-validation-error-msg="Введите номер отделения">
                 </div>
                 <div class="radio-group clearfix delivery">
                   <div class="radio-group1">
@@ -198,7 +204,7 @@
           <h5 class="title">мы в соцсетях</h5><a class="socials__icon twitter" href="https://twitter.com" target="_blank"></a><a class="socials__icon klass" href="https://odnoklassniki.com" target="_blank"></a><a class="socials__icon facebook" href="https://facebook.com" target="_blank"></a><a class="socials__icon vk" href="https://vk.com" target="_blank"></a>
         </div>
         <div class="documents item clearfix">
-          <h5 class="title">документация</h5><a class="documents__element" href="">документы</a><a class="documents__element" href="">сертификаты</a>
+          <h5 class="title">документы</h5><a class="documents__element" href="">документация</a><a class="documents__element" href="">сертификаты</a>
         </div>
         <div class="currency item clearfix">
           <h5 class="title">курс нбу</h5><span class="down">Курс нбу : usd - 30.000</span>
@@ -215,8 +221,8 @@
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <link href="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/theme-default.min.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script src="assets/scripts/bundle.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/theme-default.min.css" rel="stylesheet" type="text/css">
   </body>
 </html>
